@@ -6,8 +6,10 @@
   <title>Tech Gear - Gear up for the Future!</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/boostrap.css">
 </head>
 <body>
+  <header>
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
         <a class="navbar-brand mx-auto" href="#"><img src="images/logo-tg-trans.svg" alt="Tech Gear"></a>
@@ -63,17 +65,37 @@
         </div>
     </nav>
 
-  <hero>
-    
-  
-  </hero>
-
-
   </header>
+  
+    <div id="hero">
+      <div id="hero-carousel" class="carousel slide hero-slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item c-item active">
+            <img src="images/slider-image2.jpg" class="d-block w-100 c-img" alt="Slide 1">
+          </div>
+          <div class="carousel-item c-item">
+            <img src="images/slider-image3.jpg" class="d-block w-100 c-img" alt="Slide 2">
+          </div>
+          <div class="carousel-item c-item">
+            <img src="images/slider-image4.jpg" class="d-block w-100 c-img" alt="Slide 3">
+          </div>
+
+          <a class="carousel-control-prev" href="#hero-carousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </a>
+          <a class="carousel-control-next" href="#hero-carousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </a>
+        </div>
+      </div>
+    
+    </div id="hero">
+
 
 
   <script src="script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
