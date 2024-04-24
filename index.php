@@ -4,16 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tech Gear - Gear up for the Future!</title>
-  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  
-
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <a class="navbar-brand mx-auto" href="#"><img src="images/logo-tg-trans.svg"></a>
+        <a class="navbar-brand mx-auto" href="#"><img src="images/logo-tg-trans.svg" alt="Tech Gear"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -38,7 +35,7 @@
               <li class="nav-item">
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Λογαριασμός
+                  Λογαριασμός
                   </a>
                   <div class="dropdown-menu">
                     <a class="dropdown-item" href="#">Σύνδεση</a>
@@ -62,13 +59,21 @@
               <input class="form-control me-2" type="search" placeholder="Ψάχνω για..." aria-label="Search">
               <button class="btn btn-outline-success" type="submit">Αναζήτηση</button>
             </form>
-            
           </div>
         </div>
     </nav>
-  </header>
+
+  <hero>
+    
   
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </hero>
+
+
+  </header>
+
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
