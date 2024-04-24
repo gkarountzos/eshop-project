@@ -65,29 +65,35 @@
         </div>
     </nav>
   </header>
-  
-    <div id="hero">
-      <div id="carouselExample" class="carousel slide">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="images/slider-image2.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="images/slider-image3.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="images/slider-image4.jpg" class="d-block w-100" alt="...">
-          </div>
+
+
+  <div id="hero" class="slider">
+    <div id="hero-carousel" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <a class="slider-link" href="#">
+            <img src="images/slider-image2.jpg" class="d-block w-100" alt="Slide 1">
+          </a>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        </button>
+        <div class="carousel-item">
+          <a class="slider-link" href="#">
+            <img src="images/slider-image3.jpg" class="d-block w-100" alt="Slide 2">
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a class="slider-link" href="#">
+            <img src="images/slider-image4.jpg" class="d-block w-100" alt="Slide 3">
+          </a>
+        </div>
       </div>
-    
-    </div id="hero">
+      <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div id="hero">
 
   <script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>

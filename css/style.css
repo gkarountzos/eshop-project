@@ -7,6 +7,10 @@
     font-size: 16px;
 }
 
+body{
+    background-color: var(--secondarycolor);
+}
+
 
 .selector-for-some-widget {
     box-sizing: content-box;
@@ -21,5 +25,4 @@ nav{
     background-color: var(--fourthcolor);
     /* height: 10vh; */
 }
-
 
