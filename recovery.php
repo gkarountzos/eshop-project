@@ -64,7 +64,29 @@
     </nav>
 
     <section id="recovery">
-        <p>recovery<p>
+      <div class="container mt-5 pt-5">
+        <div class="row">
+          <div class="col-12 col-sm8 col-md-6 m-auto">
+            <div class="card border-0 shadow">
+              <div class="card-body">
+                <div class="text-center">
+                  <img src="images/logo-techgear-trans.svg">
+                </div>
+                <div class="text-center">
+                  <h1>Ανάκτηση λογαριασμού</h1>
+                </div>
+                <form action="">
+                  
+                  <input type="text" name="" id="" class="form-control my-4 py-2" placeholder="Πληκτρολόγισε το email σου">
+                  <div class="text-center mt-3">
+                    <button class="btn btn-dark">Ανάκτηση</button>
+                    <a href="login.php" class="nav-link">Πίσω στη σύνδεση</a>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
 

@@ -7,11 +7,6 @@
     font-size: 16px;
 }
 
-body{
-    background-color: var(--secondarycolor);
-}
-
-
 .selector-for-some-widget {
     box-sizing: content-box;
   }
@@ -26,3 +21,7 @@ nav{
     /* height: 10vh; */
 }
 
+.text-center img {
+    width: 15em;
+    height: 7.5em;
+}
