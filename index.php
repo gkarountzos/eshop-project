@@ -57,7 +57,7 @@
             </ul>
             <form class="d-flex me-auto me-lg-3" role="search">
               <input class="form-control me-2" type="search" placeholder="Ψάχνω για..." aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Αναζήτηση</button>
+              <button class="btn btn-outline-dark" type="submit">Αναζήτηση</button>
             </form>
           </div>
         </div>
