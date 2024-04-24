@@ -21,27 +21,46 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
+                  ΠΡΟΪΟΝΤΑ
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li><a class="dropdown-item" href="#">Τηλεφωνία</a></li>
+                  <li><a class="dropdown-item" href="#">Ήχος</a></li>
+                  <li><a class="dropdown-item" href="#">Τηλεοράσεις</a></li>
+                  <li><a class="dropdown-item" href="#">Υπολογιστές</a></li>
+                  <li><a class="dropdown-item" href="#">Αναβάθμιση & Δικτυακά</a></li>
+                  <li><a class="dropdown-item" href="#">Smart Tech & Gadgets</a></li>
+                  <li><a class="dropdown-item" href="#">Ηλεκτροκίνηση</a></li>
                 </ul>
               </li>
             </ul>
             <ul class="navbar-nav mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Λογαριασμός
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Σύνδεση</a>
+                    <a class="dropdown-item" href="#">Ξέχασες τον κωδικό σου;</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Νέος χρήστης; Κάνε Εγγραφή</a>
+                  </div>
+                </li>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="#">Αγαπημένα</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Εξέλιξη Παραγγελίας</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Καλάθι</a>
               </li>
             </ul>
             <form class="d-flex me-auto me-lg-3" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
+              <input class="form-control me-2" type="search" placeholder="Ψάχνω για..." aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Αναζήτηση</button>
             </form>
             
           </div>
