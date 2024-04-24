@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tech Gear - Gear up for the Future!</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/boostrap.css">
 </head>
+
 <body>
   <header>
     <nav class="navbar navbar-expand-lg">
@@ -64,38 +64,33 @@
           </div>
         </div>
     </nav>
-
   </header>
   
     <div id="hero">
-      <div id="hero-carousel" class="carousel slide hero-slide" data-ride="carousel">
+      <div id="carouselExample" class="carousel slide">
         <div class="carousel-inner">
-          <div class="carousel-item c-item active">
-            <img src="images/slider-image2.jpg" class="d-block w-100 c-img" alt="Slide 1">
+          <div class="carousel-item active">
+            <img src="images/slider-image2.jpg" class="d-block w-100" alt="...">
           </div>
-          <div class="carousel-item c-item">
-            <img src="images/slider-image3.jpg" class="d-block w-100 c-img" alt="Slide 2">
+          <div class="carousel-item">
+            <img src="images/slider-image3.jpg" class="d-block w-100" alt="...">
           </div>
-          <div class="carousel-item c-item">
-            <img src="images/slider-image4.jpg" class="d-block w-100 c-img" alt="Slide 3">
+          <div class="carousel-item">
+            <img src="images/slider-image4.jpg" class="d-block w-100" alt="...">
           </div>
-
-          <a class="carousel-control-prev" href="#hero-carousel" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          </a>
-          <a class="carousel-control-next" href="#hero-carousel" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          </a>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
       </div>
     
     </div id="hero">
 
-
-
   <script src="script.js"></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </body>
 </html>
