@@ -72,7 +72,7 @@
                   <div class="text-center">
                     <img src="images/logo-techgear-trans.svg">
                   </div>
-                  <form action="">
+                  <form action="login.php" method="POST">
                     <input type="text" name="" id="" class="form-control my-4 py-2" placeholder="Email">
                     <input type="password" name="" id="" class="form-control my-4 py-2" placeholder="Ο κωδικός σου">
                     <div class="text-center mt-3">
@@ -88,12 +88,14 @@
     </section>
 
   <?php
-  
+    if(isset($POST["login"])){
+      echo"tesT";
+    }
   ?>
 
 <script src="script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </body>
 
 </html>
