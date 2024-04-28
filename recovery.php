@@ -63,7 +63,7 @@
         </div>
     </nav>
 
-    <section id="recovery">
+    <section id="recovery-form">
       <div class="container mt-5 pt-5">
         <div class="row">
           <div class="col-12 col-sm8 col-md-6 m-auto">
@@ -77,9 +77,9 @@
                 </div>
                 <form action="">
                   
-                  <input type="text" name="" id="" class="form-control my-4 py-2" placeholder="Πληκτρολόγισε το email σου">
+                  <input type="email" name="email" id="inputEmail" class="form-control my-4 py-2" placeholder="Πληκτρολόγισε το email σου">
                   <div class="text-center mt-3">
-                    <button class="btn btn-dark">Ανάκτηση</button>
+                    <button type="submit" name="recover" class="btn btn-dark">Ανάκτηση</button>
                     <a href="login.php" class="nav-link">Πίσω στη σύνδεση</a>
                   </div>
               </div>
@@ -89,8 +89,10 @@
       </div>
     </section>
 
-  <?php
-  
+    <?php
+    if(isset($_POST["recover"])){
+      include "connect.php";
+    }
   ?>
 
 <script src="script.js"></script>

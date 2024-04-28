@@ -63,7 +63,7 @@
         </div>
     </nav>
 
-    <section id="register">
+    <section id="register-form">
       <div class="container mt-5 pt-5">
         <div class="row">
           <div class="col-12 col-sm8 col-md-6 m-auto">
@@ -72,15 +72,15 @@
                 <div class="text-center">
                   <img src="images/logo-techgear-trans.svg">
                 </div>
-                <form action="">
-                  <input type="text" name="" id="" class="form-control my-4 py-2" placeholder="Όνομα">
-                  <input type="text" name="" id="" class="form-control my-4 py-2" placeholder="Επίθετο">
-                  <input type="email" name="" id="" class="form-control my-4 py-2" placeholder="Email">
-                  <input type="password" name="" id="" class="form-control my-4 py-2" placeholder="Κωδικός">
-                  <input type="password" name="" id="" class="form-control my-4 py-2" placeholder="Διεύθυνση">
-                  <input type="password" name="" id="" class="form-control my-4 py-2" placeholder="Τηλ. Επικοινωνίας">
+                <form action="register.php" method="POST">
+                  <input type="text" name="fname" id="inputFname1" class="form-control my-4 py-2" placeholder="Όνομα">
+                  <input type="text" name="lname" id="inputLname1" class="form-control my-4 py-2" placeholder="Επίθετο">
+                  <input type="email" name="email" id="inputEmail" class="form-control my-4 py-2" placeholder="Email">
+                  <input type="password" name="pass" id="inputPassword" class="form-control my-4 py-2" placeholder="Κωδικός">
+                  <input type="text" name="address" id="inputAddress" class="form-control my-4 py-2" placeholder="Διεύθυνση">
+                  <input type="text" name="phone" id="inputPhone" class="form-control my-4 py-2" placeholder="Τηλ. Επικοινωνίας">
                   <div class="text-center mt-3">
-                    <button class="btn btn-dark">Εγγραφή</button>
+                    <button type="submit" name="register" class="btn btn-dark">Εγγραφή</button>
                     <a href="login.php" class="nav-link">Έχεις ήδη λογαριασμό; Συνδέσου τωρα!</a>
                   </div>
               </div>
@@ -92,8 +92,21 @@
 
 
   <?php
-    if(isset($POST["login"])){
+    if(isset($_POST["register"])){
+      include "connect.php";
+
+      $fname= $_POST["fname"];
+      $lname= $_POST["lname"];
+      $email= $_POST["email"];
+      $pass= $_POST["pass"];
+      $address= $_POST["address"];
+      $phone= $_POST["phone"];
+
+      $sql_register = "INSERT INTO users(fname,lname,email,password,address,phone)
+                      VALUES('$fname','$lname','$email','$pass','$address','phone');";
       
+      mysqli_query($conn,$sql_register);
+
     }
   ?>
 

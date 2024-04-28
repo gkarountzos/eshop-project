@@ -63,7 +63,7 @@
         </div>
     </nav>
 
-    <section id="login">
+    <section id="login-form">
         <div class="container mt-5 pt-5">
           <div class="row">
             <div class="col-12 col-sm8 col-md-6 m-auto">
@@ -73,10 +73,10 @@
                     <img src="images/logo-techgear-trans.svg">
                   </div>
                   <form action="login.php" method="POST">
-                    <input type="text" name="" id="" class="form-control my-4 py-2" placeholder="Email">
-                    <input type="password" name="" id="" class="form-control my-4 py-2" placeholder="Ο κωδικός σου">
+                    <input type="text" name="email" id="inputEmail" class="form-control my-4 py-2" placeholder="Email">
+                    <input type="password" name="pass" id="inputLname" class="form-control my-4 py-2" placeholder="Ο κωδικός σου">
                     <div class="text-center mt-3">
-                      <button class="btn btn-dark">Σύνδεση</button>
+                      <button type="submit" name="login" class="btn btn-dark">Σύνδεση</button>
                       <a href="recovery.php" class="nav-link">Ξέχασες τον κωδικό σου; Ανάκτηση</a>
                       <a href="register.php" class="nav-link">Νέος χρήστης; Κάνε εγγραφή τώρα!</a>
                     </div>
@@ -88,8 +88,8 @@
     </section>
 
   <?php
-    if(isset($POST["login"])){
-      echo"tesT";
+    if(isset($_POST["login"])){
+      include "connect.php";
     }
   ?>
 
