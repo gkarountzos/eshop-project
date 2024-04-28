@@ -77,7 +77,6 @@
                   <input type="text" name="" id="" class="form-control my-4 py-2" placeholder="Επίθετο">
                   <input type="email" name="" id="" class="form-control my-4 py-2" placeholder="Email">
                   <input type="password" name="" id="" class="form-control my-4 py-2" placeholder="Ο κωδικός σου">
-                  <input type="password" name="" id="" class="form-control my-4 py-2" placeholder="Επιβεβαίωση κωδικόυ">
                   <div class="text-center mt-3">
                     <button class="btn btn-dark">Εγγραφή</button>
                     <a href="login.php" class="nav-link">Έχεις ήδη λογαριασμό; Συνδέσου τωρα!</a>
