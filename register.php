@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="images/logo-tg-trans.svg">
   <title>Tech Gear - Gear up for the Future!</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
@@ -80,7 +81,7 @@
                   <input type="text" name="address" id="inputAddress" class="form-control my-4 py-2" placeholder="Διεύθυνση">
                   <input type="text" name="phone" id="inputPhone" class="form-control my-4 py-2" placeholder="Τηλ. Επικοινωνίας">
                   <div class="text-center mt-3">
-                    <button type="submit" name="register" class="btn btn-dark">Εγγραφή</button>
+                    <button type="submit" name="register" class="btn btn-success">Εγγραφή</button>
                     <a href="login.php" class="nav-link">Έχεις ήδη λογαριασμό; Συνδέσου τωρα!</a>
                   </div>
               </div>
@@ -105,7 +106,11 @@
       $sql_register = "INSERT INTO users(fname,lname,email,password,address,phone)
                       VALUES('$fname','$lname','$email','$pass','$address','phone');";
       
-      mysqli_query($conn,$sql_register);
+      if (mysqli_query($conn,$sql_register)){
+        echo "Η εγγραφή πραγματοποιήθηκε επιτυχώς.";
+      }else{
+        echo "Η εγγραφή απέτυχε.";
+      }
 
     }
   ?>
