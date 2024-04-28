@@ -91,9 +91,18 @@
   <?php
     if(isset($_POST["login"])){
       include "connect.php";
-
       $email = $_POST["email"];
       $pass = $_POST["pass"];
+
+      $sql_login = "SELECT * FROM users WHERE email='$email' AND password='$pass'";
+
+      $result = mysqli_query($conn,$sql_login);
+
+      if(!$row = mysqli_fetch_assoc($result)){
+        echo "Λάθος στοιχεία σύνδεσης";
+      }else{
+        echo "Γεια σου " .$row["fname"];
+      }
     }
   ?>
 

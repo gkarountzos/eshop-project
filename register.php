@@ -74,10 +74,10 @@
                   <img src="images/logo-techgear-trans.svg">
                 </div>
                 <form action="register.php" method="POST">
-                  <input type="text" name="fname" id="inputFname1" class="form-control my-4 py-2" placeholder="Όνομα">
-                  <input type="text" name="lname" id="inputLname1" class="form-control my-4 py-2" placeholder="Επίθετο">
-                  <input type="email" name="email" id="inputEmail" class="form-control my-4 py-2" placeholder="Email">
-                  <input type="password" name="pass" id="inputPassword" class="form-control my-4 py-2" placeholder="Κωδικός">
+                  <input type="text" name="fname" required id="inputFname1" class="form-control my-4 py-2" placeholder="Όνομα *">
+                  <input type="text" name="lname" required id="inputLname1" class="form-control my-4 py-2" placeholder="Επίθετο *">
+                  <input type="email" name="email" required id="inputEmail" class="form-control my-4 py-2" placeholder="Email *">
+                  <input type="password" name="pass" required id="inputPassword" class="form-control my-4 py-2" placeholder="Κωδικός *">
                   <input type="text" name="address" id="inputAddress" class="form-control my-4 py-2" placeholder="Διεύθυνση">
                   <input type="text" name="phone" id="inputPhone" class="form-control my-4 py-2" placeholder="Τηλ. Επικοινωνίας">
                   <div class="text-center mt-3">
