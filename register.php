@@ -73,7 +73,9 @@
                   <img src="images/logo-techgear-trans.svg">
                 </div>
                 <form action="">
-                  <input type="text" name="" id="" class="form-control my-4 py-2" placeholder="Email">
+                  <input type="text" name="" id="" class="form-control my-4 py-2" placeholder="Όνομα">
+                  <input type="text" name="" id="" class="form-control my-4 py-2" placeholder="Επίθετο">
+                  <input type="email" name="" id="" class="form-control my-4 py-2" placeholder="Email">
                   <input type="password" name="" id="" class="form-control my-4 py-2" placeholder="Ο κωδικός σου">
                   <input type="password" name="" id="" class="form-control my-4 py-2" placeholder="Επιβεβαίωση κωδικόυ">
                   <div class="text-center mt-3">
@@ -89,7 +91,9 @@
 
 
   <?php
-  
+    if(isset($POST["login"])){
+      
+    }
   ?>
 
 
