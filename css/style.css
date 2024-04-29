@@ -1,29 +1,31 @@
-:root{
-    --maincolor: #211951;
-    --secondarycolor: #F0F3FF;
-    --thirdcolor: #836FFF;
-    --fourthcolor: #15F5BA;
-    font-family: 'Roboto Mono', monospace;
-    font-size: 16px;
+:root {
+  --maincolor: #211951;
+  --secondarycolor: #f0f3ff;
+  --thirdcolor: #836fff;
+  --fourthcolor: #15f5ba;
+  font-family: "Roboto Mono", monospace;
+  font-size: 16px;
 }
 
 .selector-for-some-widget {
-    box-sizing: content-box;
-  }
-
-nav img{
-    width: 120px;
-    height: 60px;
+  box-sizing: content-box;
 }
 
-nav{
-    background-color: var(--fourthcolor);
-    /* height: 10vh; */
+nav img {
+  width: 120px;
+  height: 60px;
 }
 
-.text-center img {
-    width: 15em;
-    height: 7.5em;
+nav {
+  background-color: var(--fourthcolor);
+  /* height: 10vh; */
 }
 
+.menu button {
+  display: flex;
+  text-align: center;
+  background-color: #fff;
+}
 
+.menu button span {
+}

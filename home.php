@@ -4,6 +4,7 @@ session_destroy();
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,8 +15,7 @@ session_destroy();
 </head>
 
 <body>
-  
-<header>
+  <header>
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
         <a class="navbar-brand mx-auto" href="home.php"><img src="images/logo-tg-trans.svg" alt="Tech Gear"></a>
@@ -23,51 +23,51 @@ session_destroy();
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  ΠΡΟΪΟΝΤΑ
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Τηλεφωνία</a></li>
-                  <li><a class="dropdown-item" href="#">Ήχος</a></li>
-                  <li><a class="dropdown-item" href="#">Τηλεοράσεις</a></li>
-                  <li><a class="dropdown-item" href="#">Υπολογιστές</a></li>
-                  <li><a class="dropdown-item" href="#">Αναβάθμιση & Δικτυακά</a></li>
-                  <li><a class="dropdown-item" href="#">Smart Tech & Gadgets</a></li>
-                  <li><a class="dropdown-item" href="#">Ηλεκτροκίνηση</a></li>
-                </ul>
-              </li>
-            </ul>
-            <ul class="navbar-nav mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Λογαριασμός
-                    </a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="login.php">Σύνδεση</a>
-                        <a class="dropdown-item" href="recovery.php">Ξέχασες τον κωδικό σου;</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="register.php">Νέος χρήστης; Κάνε Εγγραφή</a>
-                    </div>
-                    </li>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Αγαπημένα</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Εξέλιξη Παραγγελίας</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Καλάθι</a>
-                </li>
-            </ul>
-            <form class="d-flex me-auto me-lg-3" role="search">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                ΠΡΟΪΟΝΤΑ
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Τηλεφωνία</a></li>
+                <li><a class="dropdown-item" href="#">Ήχος</a></li>
+                <li><a class="dropdown-item" href="#">Τηλεοράσεις</a></li>
+                <li><a class="dropdown-item" href="#">Υπολογιστές</a></li>
+                <li><a class="dropdown-item" href="#">Αναβάθμιση & Δικτυακά</a></li>
+                <li><a class="dropdown-item" href="#">Smart Tech & Gadgets</a></li>
+                <li><a class="dropdown-item" href="#">Ηλεκτροκίνηση</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Λογαριασμός
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="login.php">Σύνδεση</a>
+                <a class="dropdown-item" href="recovery.php">Ξέχασες τον κωδικό σου;</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="register.php">Νέος χρήστης; Κάνε Εγγραφή</a>
+              </div>
+            </li>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Αγαπημένα</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Εξέλιξη Παραγγελίας</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Καλάθι</a>
+            </li>
+          </ul>
+          <form class="d-flex me-auto me-lg-3" role="search">
             <input class="form-control me-2" type="search" placeholder="Ψάχνω για..." aria-label="Search">
             <button class="btn btn-outline-dark" type="submit">Αναζήτηση</button>
-            </form>
-          </div>
+          </form>
         </div>
+      </div>
     </nav>
   </header>
 
@@ -99,10 +99,36 @@ session_destroy();
     </div>
   </div id="hero">
 
-  
+  <div class="container">
+    <div class="row menu">
+      <h1 class="text-center">FLASH DEALS</h1>
+      <form action="home.php" method="POST">
+        <button type="submit" name=""><img src="images/iphone15promax.jpg"><span>iPhone 15 Pro Max μόνο 1.378,89€!</span></button>
+        <button type="submit" name=""><img src="images/sgalaxya54.jpg"></button>
+        <button type="submit" name=""><img src="images/sgalaxys24.jpg"></button>
+      </form>
+    </div>
+    <div class="row">
+      <?php
+      if (isset($_POST[""])) {
+        include "connect.php";
+
+        $sql = "SELECT * FROM products WHERE category ='' ";
+
+        $result = mysqli_query($conn, $sql);
+
+        while ($row = mysqli_fetch_assoc($result)) {
+        }
+      }
+      ?>
+    </div>
+  </div>
+
+
 
   <script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </body>
+
 </html>
