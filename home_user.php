@@ -1,10 +1,11 @@
 <?php
-  session_start();
+session_start();
 
-  if(isset($_POST["logout"])){
-
-
-  }
+    if(isset($_POST["logout"])){
+        session_destroy();
+        header("Location:home.php");
+    }
+                    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -55,9 +56,14 @@
                             ?>
                         </p>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="user_update.php">Ενημέρωση λογαριασμόυ</a>
-                        <a class="dropdown-item" name="logout" href="home.php">Αποσύνδεση</a>
+                        <form action="home_user.php" method="POST">
+                            <a class="dropdown-item" href="user_update.php">Ενημέρωση λογαριασμόυ</a>
+                            <div class="text-center mt-3">
+                                <button type="submit" name="logout" class="btn btn-danger">Αποσύνδεση</button>
+                            </div>
+                        </form>
                     </div>
+                    
                     </li>
                 </li>
                 <li class="nav-item">
@@ -106,6 +112,10 @@
       </button>
     </div>
   </div id="hero">
+
+  <footer class="footer">
+
+
 
   <script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
