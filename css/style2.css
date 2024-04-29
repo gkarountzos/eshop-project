@@ -19,9 +19,13 @@ a {
   color: inherit;
 }
 
+p {
+  margin-bottom: 0;
+}
+
 #front {
   display: grid;
-  grid-template-rows: 15em 7em 20em 6em 2em 6em 2em;
+  grid-template-rows: 15em 7em 20em 6em 2em 6em 3em;
   grid-template-columns: repeat(3, 1fr);
   width: 100vw;
   height: 100vh;
@@ -44,6 +48,8 @@ a {
   grid-column: span 3;
   grid-row: 2;
   place-self: center;
+  text-align: center;
+  padding-inline: 20px;
 }
 
 .front-text h1 {
@@ -77,7 +83,7 @@ button {
   place-self: center;
 }
 .item5 {
-  text-align: center;
+  place-self: center;
   grid-column: 2;
   grid-row: 5;
 }
@@ -87,10 +93,16 @@ button {
   place-self: center;
 }
 
+@media screen and (max-width: 1250) {
+  p {
+    text-wrap: wrap;
+  }
+}
+
 @media screen and (max-width: 900px) {
   #front {
     display: grid;
-    grid-template-rows: 15em 7em 20em 20em 20em 20em 6em 2em 6em 6em;
+    grid-template-rows: 15em 7em 20em 20em 20em 6em 3em 6em;
     grid-template-columns: repeat(3, 1fr);
     width: 100vw;
     height: 100vh;

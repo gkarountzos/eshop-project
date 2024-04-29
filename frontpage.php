@@ -19,7 +19,7 @@
             <img src="images\logo-techgear-trans.svg">
         </div>
         <div class="front-text">
-            <h1>Μερικά απο τα προϊόντα του καταστήματός μας</h1>
+            <h1>Μερικά απο τα προϊόντα του αποκλειστικού μας καταστήματός </h1>
         </div>
         <div class="item1 front-products">
             <button>
@@ -52,6 +52,7 @@
             </button>
         </div>
         </div>
+
         <div class="item4 redirect">
             <button type="button" class="btn btn-success"><a href="login.php">Σύνδεση</a></button>
         </div>

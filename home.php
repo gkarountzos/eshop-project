@@ -1,6 +1,11 @@
 <?php
 session_start();
-session_destroy();
+
+if (isset($_POST["logout"])) {
+  session_destroy();
+  header("Location:frontpage.php");
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,11 +50,20 @@ session_destroy();
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Λογαριασμός
               </a>
               <div class="dropdown-menu">
-                <a class="dropdown-item" href="login.php">Σύνδεση</a>
-                <a class="dropdown-item" href="recovery.php">Ξέχασες τον κωδικό σου;</a>
+                <p class="dropdown-item">
+                  <?php
+                  echo "Γεια σου " . $_SESSION["fname"];
+                  ?>
+                </p>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="register.php">Νέος χρήστης; Κάνε Εγγραφή</a>
+                <form action="home.php" method="POST">
+                  <a class="dropdown-item" href="user_update.php">Ενημέρωση λογαριασμόυ</a>
+                  <div class="text-center mt-3">
+                    <button type="submit" name="logout" class="btn btn-danger">Αποσύνδεση</button>
+                  </div>
+                </form>
               </div>
+
             </li>
             </li>
             <li class="nav-item">

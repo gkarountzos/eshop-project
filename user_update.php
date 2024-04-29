@@ -1,5 +1,12 @@
 <?php
 session_start();
+
+if (isset($_POST["logout"])) {
+  session_destroy();
+  header("Location:frontpage.php");
+}
+
+?>
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +25,7 @@ session_start();
   <header>
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <a class="navbar-brand mx-auto" href="home_user.php"><img src="images/logo-tg-trans.svg" alt="Tech Gear"></a>
+        <a class="navbar-brand mx-auto" href="home.php"><img src="images/logo-tg-trans.svg" alt="Tech Gear"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
