@@ -1,3 +1,11 @@
+<?php
+  session_start();
+
+  if(isset($_POST["logout"])){
+
+
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +22,7 @@
 <header>
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <a class="navbar-brand mx-auto" href="home.php"><img src="images/logo-tg-trans.svg" alt="Tech Gear"></a>
+        <a class="navbar-brand mx-auto" href="#"><img src="images/logo-tg-trans.svg" alt="Tech Gear"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -41,10 +49,14 @@
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Λογαριασμός
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="login.php">Σύνδεση</a>
-                        <a class="dropdown-item" href="recovery.php">Ξέχασες τον κωδικό σου;</a>
+                        <p class="dropdown-item">
+                            <?php
+                                echo "Γεια σου " .$_SESSION["fname"];
+                            ?>
+                        </p>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="register.php">Νέος χρήστης; Κάνε Εγγραφή</a>
+                        <a class="dropdown-item" href="user_update.php">Ενημέρωση λογαριασμόυ</a>
+                        <a class="dropdown-item" name="logout" href="home.php">Αποσύνδεση</a>
                     </div>
                     </li>
                 </li>

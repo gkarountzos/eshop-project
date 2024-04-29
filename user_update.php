@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +17,7 @@
 <header>
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <a class="navbar-brand mx-auto" href="home.php"><img src="images/logo-tg-trans.svg" alt="Tech Gear"></a>
+        <a class="navbar-brand mx-auto" href="home_user.php"><img src="images/logo-tg-trans.svg" alt="Tech Gear"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -41,10 +44,9 @@
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Λογαριασμός
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="login.php">Σύνδεση</a>
-                        <a class="dropdown-item" href="recovery.php">Ξέχασες τον κωδικό σου;</a>
+                        <a class="dropdown-item" href="user_update.php">Ενημέρωση λογαριασμόυ</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="register.php">Νέος χρήστης; Κάνε Εγγραφή</a>
+                        <a class="dropdown-item" href="register.php">Αποσύνδεση</a>
                     </div>
                     </li>
                 </li>
@@ -67,36 +69,30 @@
     </nav>
   </header>
 
-  <div id="hero" class="slider">
-    <div id="hero-carousel" class="carousel slide">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <a class="slider-link" href="#">
-            <img src="images/slider-image2.jpg" class="d-block w-100" alt="Slide 1">
-          </a>
-        </div>
-        <div class="carousel-item">
-          <a class="slider-link" href="#">
-            <img src="images/slider-image3.jpg" class="d-block w-100" alt="Slide 2">
-          </a>
-        </div>
-        <div class="carousel-item">
-          <a class="slider-link" href="#">
-            <img src="images/slider-image4.jpg" class="d-block w-100" alt="Slide 3">
-          </a>
+  <section id="update-form">
+      <div class="container mt-5 pt-5">
+        <div class="row">
+          <div class="col-12 col-sm8 col-md-6 m-auto">
+            <div class="card border-0 shadow">
+              <div class="card-body">
+                <div class="text-center">
+                  <img src="images/logo-techgear-trans.svg">
+                </div>
+                <form action="register.php" method="POST">
+                  <input type="text" name="fname" required id="inputFname1" class="form-control my-4 py-2" placeholder="Όνομα *">
+                  <input type="text" name="lname" required id="inputLname1" class="form-control my-4 py-2" placeholder="Επίθετο *">
+                  <input type="email" name="email" required id="inputEmail" class="form-control my-4 py-2" placeholder="Email *">
+                  <input type="password" name="old-pass" required id="inputPassword" class="form-control my-4 py-2" placeholder="Παλιός κωδικός *">
+                  <input type="password" name="new-pass" required id="inputAddress" class="form-control my-4 py-2" placeholder="Νέος κωδικός *">
+                  <input type="password" name="confirm-new-pass" required id="inputPhone" class="form-control my-4 py-2" placeholder="Επιβεβαίωση νέου κωδικού *">
+                  <div class="text-center mt-3">
+                    <button type="submit" name="register" class="btn btn-success">Αλλαγή στοιχείων</button>
+                  </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      </button>
-    </div>
-  </div id="hero">
+    </section>
 
-  <script src="script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-</body>
-</html>
+</body
