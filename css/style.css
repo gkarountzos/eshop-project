@@ -2,7 +2,7 @@
   --maincolor: #211951;
   --secondarycolor: #f0f3ff;
   --thirdcolor: #836fff;
-  --fourthcolor: #15f5ba;
+  --fourthcolor: #ffc439;
   font-family: "Roboto Mono", monospace;
   font-size: 16px;
 }
@@ -17,15 +17,69 @@ nav img {
 }
 
 nav {
-  background-color: #fff;
+  background-color: var(--fourthcolor);
   /* height: 10vh; */
 }
 
-.menu button {
-  display: flex;
-  text-align: center;
-  background-color: #fff;
+.offers {
+  display: grid;
+  grid-template-rows: 20em 20em;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em;
+  width: 100vw;
+  height: auto;
+}
+
+.offer-grid-item {
+  place-self: center;
+}
+
+.hero-text {
+  padding-block: 20px;
+}
+
+.hero-promo {
+  padding-block: 40px;
+}
+
+.hero-promo img {
+  border-radius: 15px;
+}
+
+.form-logo img {
+  width: 75%;
 }
 
 .menu button span {
+}
+
+/* responsive */
+
+@media screen and (max-width: 1656px) {
+  .hero-promo img {
+    border-radius: 50px;
+    width: 100%;
+    height: auto;
+    padding-inline: 20px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .offers {
+    display: grid;
+    grid-template-rows: 20em 20em 20em;
+    grid-template-columns: repeat(2, 2fr);
+    width: 100vw;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .offers {
+    display: grid;
+    grid-template-rows: 20em 20em 20em 20em 20em 20em;
+    grid-template-columns: repeat(1, 2fr);
+    width: 100vw;
+    height: auto;
+  }
 }

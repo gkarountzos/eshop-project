@@ -23,7 +23,7 @@ if (isset($_POST["logout"])) {
   <header>
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <a class="navbar-brand mx-auto" href="home.php"><img src="images/logo-tg-trans.svg" alt="Tech Gear"></a>
+        <a class="navbar-brand mx-auto" href="home.php"><img src="images/logo-tg-trans.svg" alt="tg-mini-logo"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -38,9 +38,7 @@ if (isset($_POST["logout"])) {
                 <li><a class="dropdown-item" href="#">Ήχος</a></li>
                 <li><a class="dropdown-item" href="#">Τηλεοράσεις</a></li>
                 <li><a class="dropdown-item" href="#">Υπολογιστές</a></li>
-                <li><a class="dropdown-item" href="#">Αναβάθμιση & Δικτυακά</a></li>
                 <li><a class="dropdown-item" href="#">Smart Tech & Gadgets</a></li>
-                <li><a class="dropdown-item" href="#">Ηλεκτροκίνηση</a></li>
               </ul>
             </li>
           </ul>
@@ -70,9 +68,6 @@ if (isset($_POST["logout"])) {
               <a class="nav-link" href="#">Αγαπημένα</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Εξέλιξη Παραγγελίας</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="#">Καλάθι</a>
             </li>
           </ul>
@@ -85,57 +80,81 @@ if (isset($_POST["logout"])) {
     </nav>
   </header>
 
-  <div id="hero" class="slider">
-    <div id="hero-carousel" class="carousel slide">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <a class="slider-link" href="#">
-            <img src="images/slider-image2.jpg" class="d-block w-100" alt="Slide 1">
-          </a>
-        </div>
-        <div class="carousel-item">
-          <a class="slider-link" href="#">
-            <img src="images/slider-image3.jpg" class="d-block w-100" alt="Slide 2">
-          </a>
-        </div>
-        <div class="carousel-item">
-          <a class="slider-link" href="#">
-            <img src="images/slider-image4.jpg" class="d-block w-100" alt="Slide 3">
-          </a>
-        </div>
+  <section id="hero">
+    <div class="text-center">
+      <div class="hero-text">
+        <h1>Σημερινές Προσφορές</h1>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      </button>
     </div>
-  </div id="hero">
+
+    <div class="offers">
+      <div class="offer-grid-item">
+        <button>
+          <div class="card border-0 offer-item1" style="width: 15rem;">
+            <img src="images\airpods max.jpg" class="card-img-top" alt="airpods max">
+            <div class="card-body">
+              <p class="card-text">Apple Airpods Max</p>
+            </div>
+          </div>
+        </button>
+      </div>
+      <div class="offer-grid-item">
+        <button>
+          <div class="card border-0 offer-item2" style="width: 15rem;">
+            <img src="images\appleseries9.jpg" class="card-img-top" alt="apple watch s 9">
+            <div class="card-body">
+              <p class="card-text">Apple Watch Series 9</p>
+            </div>
+          </div>
+        </button>
+      </div>
+      <div class="offer-grid-item">
+        <button>
+          <div class="card border-0 offer-item3" style="width: 15rem;">
+            <img src="images\huawei3.jpg" class="card-img-top" alt="huawei watch gt 3">
+            <div class="card-body">
+              <p class="card-text">Huawei Watch GT 3 Active</p>
+            </div>
+          </div>
+        </button>
+      </div>
+      <div class="offer-grid-item">
+        <button>
+          <div class="card border-0 offer-item4" style="width: 15rem;">
+            <img src="images\samsung43.jpg" class="card-img-top" alt="samsung tv 43inch">
+            <div class="card-body">
+              <p class="card-text">Samsung Smart TV 43"</p>
+            </div>
+          </div>
+        </button>
+      </div>
+      <div class="offer-grid-item">
+        <button>
+          <div class="card border-0 offer-item5" style="width: 15rem;">
+            <img src="images\xiaomibuds4.jpg" class="card-img-top" alt="xiaomi buds 4">
+            <div class="card-body">
+              <p class="card-text">Xiaomi Earbuds 4</p>
+            </div>
+          </div>
+        </button>
+      </div>
+      <div class="offer-grid-item">
+        <button>
+          <div class="card border-0 offer-item6" style="width: 15rem;">
+            <img src="images\sgalaxya54.jpg" class="card-img-top" alt="samsung galaxy a54">
+            <div class="card-body">
+              <p class="card-text">Samsung Galaxy A54</p>
+            </div>
+          </div>
+        </button>
+      </div>
+
+    </div>
+
+  </section>
 
   <div class="container">
-    <div class="row menu">
-      <h1 class="text-center">FLASH DEALS</h1>
-      <form action="home.php" method="POST">
-        <button type="submit" name=""><img src="images/iphone15promax.jpg"><span>iPhone 15 Pro Max μόνο 1.378,89€!</span></button>
-        <button type="submit" name=""><img src="images/sgalaxya54.jpg"></button>
-        <button type="submit" name=""><img src="images/sgalaxys24.jpg"></button>
-      </form>
-    </div>
-    <div class="row">
-      <?php
-      if (isset($_POST[""])) {
-        include "connect.php";
 
-        $sql = "SELECT * FROM products WHERE category ='' ";
-
-        $result = mysqli_query($conn, $sql);
-
-        while ($row = mysqli_fetch_assoc($result)) {
-        }
-      }
-      ?>
-    </div>
   </div>
 
 

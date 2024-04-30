@@ -31,11 +31,13 @@ if (isset($_POST["login"])) {
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg">
-    <div class="container">
-      <a class="navbar-brand mx-auto" href="frontpage.php"><img src="images/logo-tg-trans.svg" alt="Tech Gear"></a>
-    </div>
-  </nav>
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand mx-auto" href="frontpage.php"><img src="images/logo-tg-trans.svg" alt="Tech Gear"></a>
+      </div>
+    </nav>
+  </header>
 
   <section id="login-form">
     <div class="container mt-5 pt-5">
@@ -43,7 +45,7 @@ if (isset($_POST["login"])) {
         <div class="col-12 col-sm8 col-md-6 m-auto">
           <div class="card border-0 shadow">
             <div class="card-body">
-              <div class="text-center">
+              <div class="text-center form-logo">
                 <img src="images/logo-techgear-trans.svg">
               </div>
               <form action="login.php" method="POST">
@@ -54,11 +56,35 @@ if (isset($_POST["login"])) {
                   <a href="recovery.php" class="nav-link">Ξέχασες τον κωδικό σου; Ανάκτηση</a>
                   <a href="register.php" class="nav-link">Νέος χρήστης; Κάνε εγγραφή τώρα!</a>
                 </div>
+              </form>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </section>
+
+  <!-- <section id="login-form">
+    <div class="container mt-5 pt-5">
+      <div class="row">
+        <col-12 class="col-sm5 col-md-6 m-auto">
+          <card class="card border-0 shadow">
+            <div class="card-body">
+              <form action="login.php" method="POST">
+                <input type="email" name="email" required id="inputEmail" class="form-control my-4 py-2" placeholder="Email">
+                <input type="password" name="pass" id="inputLname" class="form-control my-4 py-2" placeholder="Ο κωδικός σου">
+                <div class="text-center mt-3">
+                  <button type="submit" name="login" class="btn btn-dark">Σύνδεση</button>
+                  <a href="recovery.php" class="nav-link">Ξέχασες τον κωδικό σου; Ανάκτηση</a>
+                  <a href="register.php" class="nav-link">Νέος χρήστης; Κάνε εγγραφή τώρα!</a>
+                </div>
+              </form>
+            </div>
+          </card>
+        </col-12>
+      </div>
+    </div> -->
+
   </section>
 
   <script src="script.js"></script>
