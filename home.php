@@ -6,18 +6,6 @@ if (isset($_POST["logout"])) {
   header("Location:frontpage.php");
 }
 
-if (isset($_POST["smartphones"])) {
-  include "connect.php";
-
-  header("Locationlogin.php");
-  $sql = "SELECT * FROM products WHERE category='smartphones'";
-
-  $result = mysqli_query($conn, $sql);
-
-  while ($row = mysqli_fetch_assoc($result)) {
-  }
-}
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -79,26 +67,64 @@ if (isset($_POST["smartphones"])) {
   </header>
 
   <div class="containter">
-    <div class="text-center">
-      <div class="row menu">
-        <form action="home.php" method="POST">
-          <button type="submit" name="smartphones"><img src="images\icon-phone.png"><br>
-            <p>Τηλεφωνία</p>
-          </button>
-          <button type="submit" name="computers"><img src="images\icon-laptop.png"><br>
-            <p>Computers</p>
-          </button>
-          <button type="submit" name="sound"><img src="images\icon-speaker.png"><br>
-            <p>Ήχος</p>
-          </button>
-          <button type="submit" name="tv"><img src="images\icon-tv.png"><br>
-            <p>Τηλεοράσεις</p>
-          </button>
-          <button type="submit" name="gadgets"><img src="images\icon-watch.png"><br>
-            <p>Smart Tech</p>
-          </button>
-        </form>
-      </div>
+    <div class="row menu text-center">
+      <form action="home.php" method="POST">
+        <button type="submit" name="smartphones"><img src="images\icon-phone.png"><br>
+          <p>Τηλεφωνία</p>
+        </button>
+        <button type="submit" name="computers"><img src="images\icon-laptop.png"><br>
+          <p>Computers</p>
+        </button>
+        <button type="submit" name="sound"><img src="images\icon-speaker.png"><br>
+          <p>Ήχος</p>
+        </button>
+        <button type="submit" name="tv"><img src="images\icon-tv.png"><br>
+          <p>Τηλεοράσεις</p>
+        </button>
+        <button type="submit" name="gadgets"><img src="images\icon-watch.png"><br>
+          <p>Smart Tech</p>
+        </button>
+      </form>
+    </div>
+    <div class="row text-center">
+
+      <?php
+      if (isset($_POST["smartphones"])) {
+        include "connect.php";
+
+        $sql = "SELECT * FROM products WHERE category='smartphones'";
+
+        $result = mysqli_query($conn, $sql);
+        while ($row = mysqli_fetch_assoc($result)) {
+
+
+      ?>
+          <div class="card">
+            <img src="<?php echo $row['pimage']; ?>" class="card-img-top" alt="<?php echo $row['pname']; ?>">
+            <div class="card-body">
+              <h5 class="card-title"><?php echo $row['pname']; ?></h5>
+              <p class="card-text"><?php echo $row['pdescription']; ?></p>
+              <p class="card-text">Price: <?php echo $row['pprice']; ?></p>
+              <!-- Add other card elements as needed -->
+            </div>
+          </div>
+      <?php
+        }
+      }
+
+      ?>
+
+
+
+
+
+
+
+
+      <div class="cold-md-3">col 1</div>
+      <div class="cold-md-3">col 2</div>
+      <div class="cold-md-3">col 3</div>
+      <div class="cold-md-3">col 4</div>
     </div>
   </div>
 
