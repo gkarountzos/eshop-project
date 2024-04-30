@@ -50,10 +50,7 @@ if (isset($_POST["logout"])) {
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Αγαπημένα</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Καλάθι</a>
+              <a class="nav-link" href="cart.php">Καλάθι</a>
             </li>
           </ul>
           <form class="d-flex me-lg-3" role="search">

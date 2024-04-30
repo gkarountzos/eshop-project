@@ -2,6 +2,7 @@
 session_start();
 
 if (isset($_POST["register"])) {
+  //establish connection
   include "connect.php";
 
   $fname = $_POST["fname"];
@@ -11,16 +12,22 @@ if (isset($_POST["register"])) {
   $address = $_POST["address"];
   $phone = $_POST["phone"];
 
-  $sql_register = "INSERT INTO users(fname,lname,email,password,address,phone)
-                      VALUES('$fname','$lname','$email','$pass','$address','$phone');";
-
-  if (mysqli_query($conn, $sql_register)) {
-    header("Location: login.php");
-    exit;
+  //email duplicate check
+  $sql = "SELECT * FROM users WHERE email='$email'";
+  $result = $conn->query($sql);
+  //email duplicate check
+  if ($result->num_rows > 0) {
+    echo "<script> alert ('Το email χρησιμοποιείται ήδη')</script>";
   } else {
-    echo "Η εγγραφή απέτυχε.";
+    //register user
+    $sql_register = "INSERT INTO users(fname,lname,email,password,address,phone)
+                      VALUES('$fname','$lname','$email','$pass','$address','$phone');";
+    $result_reg = $conn->query($sql_register);
+    //redirect to login
+    header("Location:login.php");
   }
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -58,7 +65,7 @@ if (isset($_POST["register"])) {
                 <input type="text" name="address" required id="inputAddress" class="form-control my-4 py-2" placeholder="Διεύθυνση *">
                 <input type="text" name="phone" required id="inputPhone" class="form-control my-4 py-2" placeholder="Τηλ. Επικοινωνίας *">
                 <div class="text-center mt-3 but">
-                  <button type="submit" name="register" value="Submit" class="btn ">Εγγραφή</button>
+                  <button type="submit" name="register" value="Submit" class="btn">Εγγραφή</button>
                   <a href="login.php" class="nav-link">Έχεις ήδη λογαριασμό; Συνδέσου τωρα!</a>
                 </div>
             </div>

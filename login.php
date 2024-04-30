@@ -11,7 +11,7 @@ if (isset($_POST["login"])) {
   $result = mysqli_query($conn, $sql);
 
   if (!$row = mysqli_fetch_assoc($result)) {
-    $message[] = 'Λάθος στοιχεία σύνδεσης';
+    echo "<script> alert ('Τα στοιχεία που έδωσες είναι λάθος!')</script>";
   } else {
     $_SESSION["fname"] = $row["fname"];
     header("Location:home.php");

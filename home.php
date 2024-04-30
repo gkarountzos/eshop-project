@@ -6,6 +6,10 @@ if (isset($_POST["logout"])) {
   header("Location:frontpage.php");
 }
 
+if (isset($_POST["add_to_cart"])) {
+  header("Location:cart.php");
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -50,7 +54,7 @@ if (isset($_POST["logout"])) {
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Καλάθι</a>
+              <a class="nav-link" href="cart.php">Καλάθι</a>
             </li>
           </ul>
           <form class="d-flex me-lg-3" role="search">
@@ -105,8 +109,8 @@ if (isset($_POST["logout"])) {
                   <h5 class="card-title"><?php echo $row['pname']; ?></h5>
                   <p class="card-text"><?php echo $row['pdescription']; ?></p>
                   <p class="card-text">Τιμή: <?php echo $row['pprice']; ?>€</p>
-                  <form>
-                    <button><a href="cart.php" class="btn btn-primary">Προσθήκη στο καλάθι</a></button>
+                  <form action action="cart.php" method="POST">
+                    <button type="submit" name="add_to_cart"><a class="btn btn-primary">Προσθήκη στο καλάθι</a></button>
                   </form>
                 </div>
               </div>
@@ -131,7 +135,9 @@ if (isset($_POST["logout"])) {
                   <h5 class="card-title"><?php echo $row['pname']; ?></h5>
                   <p class="card-text"><?php echo $row['pdescription']; ?></p>
                   <p class="card-text">Τιμή: <?php echo $row['pprice']; ?>€</p>
-                  <a href="cart.php" class="btn btn-primary">Προσθήκη στο καλάθι</a>
+                  <form action action="cart.php" method="POST">
+                    <button type="submit" name="add_to_cart"><a class="btn btn-primary">Προσθήκη στο καλάθι</a></button>
+                  </form>
                 </div>
               </div>
             </div>
@@ -155,7 +161,9 @@ if (isset($_POST["logout"])) {
                   <h5 class="card-title"><?php echo $row['pname']; ?></h5>
                   <p class="card-text"><?php echo $row['pdescription']; ?></p>
                   <p class="card-text">Τιμή: <?php echo $row['pprice']; ?>€</p>
-                  <a href="cart.php" class="btn btn-primary">Προσθήκη στο καλάθι</a>
+                  <form action action="cart.php" method="POST">
+                    <button type="submit" name="add_to_cart"><a class="btn btn-primary">Προσθήκη στο καλάθι</a></button>
+                  </form>
                 </div>
               </div>
             </div>
@@ -179,7 +187,9 @@ if (isset($_POST["logout"])) {
                   <h5 class="card-title"><?php echo $row['pname']; ?></h5>
                   <p class="card-text"><?php echo $row['pdescription']; ?></p>
                   <p class="card-text">Τιμή: <?php echo $row['pprice']; ?>€</p>
-                  <a href="cart.php" class="btn btn-primary">Προσθήκη στο καλάθι</a>
+                  <form action action="cart.php" method="POST">
+                    <button type="submit" name="add_to_cart"><a class="btn btn-primary">Προσθήκη στο καλάθι</a></button>
+                  </form>
                 </div>
               </div>
             </div>
@@ -202,7 +212,9 @@ if (isset($_POST["logout"])) {
                   <h5 class="card-title"><?php echo $row['pname']; ?></h5>
                   <p class="card-text"><?php echo $row['pdescription']; ?></p>
                   <p class="card-text">Τιμή: <?php echo $row['pprice']; ?>€</p>
-                  <a href="cart.php" class="btn btn-primary">Προσθήκη στο καλάθι</a>
+                  <form action action="cart.php" method="POST">
+                    <button type="submit" name="add_to_cart"><a class="btn btn-primary">Προσθήκη στο καλάθι</a></button>
+                  </form>
                 </div>
               </div>
             </div>
