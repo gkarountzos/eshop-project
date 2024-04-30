@@ -18,10 +18,32 @@ nav img {
 
 nav {
   background-color: var(--fourthcolor);
-  /* height: 10vh; */
+}
+/* .navbar p {
+  font-size: 32px;
+  align-items: center;
+} */
+
+.menu img {
+  width: 50%;
 }
 
-.offers {
+.menu button {
+  width: 10%;
+  height: auto;
+  border: none;
+  background: transparent;
+  padding-block: 20px;
+  padding-inline: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+/* .offers {
   display: grid;
   grid-template-rows: 20em 20em;
   grid-template-columns: repeat(3, 1fr);
@@ -44,42 +66,45 @@ nav {
 
 .hero-promo img {
   border-radius: 15px;
-}
+} */
 
 .form-logo img {
   width: 75%;
 }
 
-.menu button span {
-}
-
 /* responsive */
 
 @media screen and (max-width: 1656px) {
-  .hero-promo img {
-    border-radius: 50px;
-    width: 100%;
-    height: auto;
-    padding-inline: 20px;
+  .menu button {
+    width: 15%;
+    /* height: auto; */
   }
 }
 
-@media screen and (max-width: 900px) {
-  .offers {
-    display: grid;
-    grid-template-rows: 20em 20em 20em;
-    grid-template-columns: repeat(2, 2fr);
-    width: 100vw;
-    height: auto;
+@media screen and (max-width: 992px) {
+  .menu button {
+    width: 17%;
+    /* height: auto; */
   }
 }
 
-@media screen and (max-width: 630px) {
-  .offers {
-    display: grid;
-    grid-template-rows: 20em 20em 20em 20em 20em 20em;
-    grid-template-columns: repeat(1, 2fr);
-    width: 100vw;
-    height: auto;
+@media screen and (max-width: 792px) {
+  .menu button {
+    width: 17%;
+    padding-inline: 0;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .menu button {
+    width: 17%;
+    padding-inline: 0;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .menu button {
+    width: 19%;
+    padding-inline: 0;
   }
 }

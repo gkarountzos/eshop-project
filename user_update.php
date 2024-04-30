@@ -24,44 +24,30 @@ if (isset($_POST["logout"])) {
   <header>
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <a class="navbar-brand mx-auto" href="home.php"><img src="images/logo-tg-trans.svg" alt="tg-mini-logo"></a>
+        <a class="navbar-brand" href="home.php"><img src="images/logo-tg-trans.svg" alt="tg-mini-logo"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item fs-2">TechGear</li>
+          </ul>
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                ΠΡΟΪΟΝΤΑ
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Τηλεφωνία</a></li>
-                <li><a class="dropdown-item" href="#">Ήχος</a></li>
-                <li><a class="dropdown-item" href="#">Τηλεοράσεις</a></li>
-                <li><a class="dropdown-item" href="#">Υπολογιστές</a></li>
-                <li><a class="dropdown-item" href="#">Smart Tech & Gadgets</a></li>
-              </ul>
-            </li>
-          </ul>
-          <ul class="navbar-nav mb-2 mb-lg-0">
-            <li class="nav-item">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Λογαριασμός
+                Λογαριασμός
               </a>
               <div class="dropdown-menu">
                 <p class="dropdown-item">
-                  <?php
-                  echo "Γεια σου " . $_SESSION["fname"];
-                  ?>
+                  <?php echo "Γεια σου " . $_SESSION["fname"]; ?>
                 </p>
+                <div class="dropdown-divider"></div>
                 <form action="home.php" method="POST">
                   <div class="text-center mt-3">
                     <button type="submit" name="logout" class="btn btn-danger">Αποσύνδεση</button>
                   </div>
                 </form>
               </div>
-
-            </li>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Αγαπημένα</a>
@@ -70,7 +56,7 @@ if (isset($_POST["logout"])) {
               <a class="nav-link" href="#">Καλάθι</a>
             </li>
           </ul>
-          <form class="d-flex me-auto me-lg-3" role="search">
+          <form class="d-flex me-lg-3" role="search">
             <input class="form-control me-2" type="search" placeholder="Ψάχνω για..." aria-label="Search">
             <button class="btn btn-outline-dark" type="submit">Αναζήτηση</button>
           </form>
