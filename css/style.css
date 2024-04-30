@@ -11,6 +11,10 @@
   box-sizing: content-box;
 }
 
+.but .btn {
+  background: rgb(0, 174, 255);
+}
+
 nav img {
   width: 120px;
   height: 60px;
@@ -41,6 +45,15 @@ nav {
   display: flex;
   justify-content: center;
   text-align: center;
+}
+
+.container form button {
+  border: none;
+  background: transparent;
+}
+
+.items img {
+  width: 10%;
 }
 
 /* .offers {

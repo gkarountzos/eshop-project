@@ -51,9 +51,8 @@ if (isset($_POST["login"])) {
               <form action="login.php" method="POST">
                 <input type="email" name="email" required id="inputEmail" class="form-control my-4 py-2" placeholder="Email">
                 <input type="password" name="pass" id="inputLname" class="form-control my-4 py-2" placeholder="Ο κωδικός σου">
-                <div class="text-center mt-3">
-                  <button type="submit" name="login" class="btn btn-dark">Σύνδεση</button>
-                  <a href="recovery.php" class="nav-link">Ξέχασες τον κωδικό σου; Ανάκτηση</a>
+                <div class="but text-center mt-3">
+                  <button type="submit" name="login" class="btn">Σύνδεση</button>
                   <a href="register.php" class="nav-link">Νέος χρήστης; Κάνε εγγραφή τώρα!</a>
                 </div>
               </form>

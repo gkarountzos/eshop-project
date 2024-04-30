@@ -47,7 +47,7 @@ if (isset($_POST["register"])) {
         <div class="col-12 col-sm8 col-md-6 m-auto">
           <div class="card border-0 shadow">
             <div class="card-body">
-              <div class="text-center">
+              <div class="text-center form-logo">
                 <img src="images/logo-techgear-trans.svg">
               </div>
               <form action="register.php" method="POST">
@@ -57,8 +57,8 @@ if (isset($_POST["register"])) {
                 <input type="password" name="pass" required id="inputPassword" class="form-control my-4 py-2" placeholder="Κωδικός *">
                 <input type="text" name="address" required id="inputAddress" class="form-control my-4 py-2" placeholder="Διεύθυνση *">
                 <input type="text" name="phone" required id="inputPhone" class="form-control my-4 py-2" placeholder="Τηλ. Επικοινωνίας *">
-                <div class="text-center mt-3">
-                  <button type="submit" name="register" class="btn btn-success">Εγγραφή</button>
+                <div class="text-center mt-3 but">
+                  <button type="submit" name="register" value="Submit" class="btn ">Εγγραφή</button>
                   <a href="login.php" class="nav-link">Έχεις ήδη λογαριασμό; Συνδέσου τωρα!</a>
                 </div>
             </div>

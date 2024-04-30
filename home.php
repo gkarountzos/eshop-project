@@ -50,9 +50,6 @@ if (isset($_POST["logout"])) {
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Αγαπημένα</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="#">Καλάθι</a>
             </li>
           </ul>
@@ -70,151 +67,151 @@ if (isset($_POST["logout"])) {
     <div class="row menu text-center">
       <form action="home.php" method="POST">
         <button type="submit" name="smartphones"><img src="images\icon-phone.png"><br>
-          <p>Τηλεφωνία</p>
+          <p></p>
         </button>
         <button type="submit" name="computers"><img src="images\icon-laptop.png"><br>
-          <p>Computers</p>
+          <p></p>
         </button>
         <button type="submit" name="sound"><img src="images\icon-speaker.png"><br>
-          <p>Ήχος</p>
+          <p></p>
         </button>
         <button type="submit" name="tv"><img src="images\icon-tv.png"><br>
-          <p>Τηλεοράσεις</p>
+          <p></p>
         </button>
         <button type="submit" name="gadgets"><img src="images\icon-watch.png"><br>
-          <p>Smart Tech</p>
+          <p></p>
         </button>
       </form>
     </div>
-    <div class="row text-center">
+    <div class="container">
+      <div class="row row-cols 1 row-cols-md-3 g-4">
 
-      <?php
-      if (isset($_POST["smartphones"])) {
-        include "connect.php";
+        <?php
+        //smartphone category
+        if (isset($_POST["smartphones"])) {
+          include "connect.php";
 
-        $sql = "SELECT * FROM products WHERE category='smartphones'";
+          $sql = "SELECT * FROM products WHERE category='smartphones'";
 
-        $result = mysqli_query($conn, $sql);
-        while ($row = mysqli_fetch_assoc($result)) {
+          $result = mysqli_query($conn, $sql);
+          while ($row = mysqli_fetch_assoc($result)) {
 
 
-      ?>
-          <div class="card">
-            <img src="<?php echo $row['pimage']; ?>" class="card-img-top" alt="<?php echo $row['pname']; ?>">
-            <div class="card-body">
-              <h5 class="card-title"><?php echo $row['pname']; ?></h5>
-              <p class="card-text"><?php echo $row['pdescription']; ?></p>
-              <p class="card-text">Price: <?php echo $row['pprice']; ?></p>
-              <!-- Add other card elements as needed -->
+        ?>
+            <div class="col">
+              <div class="card">
+                <img src="images/<?php echo $row['pimage']; ?>" class="card-img-top" alt="<?php echo $row['pname']; ?>">
+                <div class="card-body">
+                  <h5 class="card-title"><?php echo $row['pname']; ?></h5>
+                  <p class="card-text"><?php echo $row['pdescription']; ?></p>
+                  <p class="card-text">Τιμή: <?php echo $row['pprice']; ?>€</p>
+                  <form>
+                    <button><a href="cart.php" class="btn btn-primary">Προσθήκη στο καλάθι</a></button>
+                  </form>
+                </div>
+              </div>
             </div>
-          </div>
-      <?php
+          <?php
+          }
+          //computers category
+        } else if (isset($_POST["computers"])) {
+          include "connect.php";
+
+          $sql = "SELECT * FROM products WHERE category='computers'";
+
+          $result = mysqli_query($conn, $sql);
+          while ($row = mysqli_fetch_assoc($result)) {
+
+
+          ?>
+            <div class="col">
+              <div class="card">
+                <img src="images/<?php echo $row['pimage']; ?>" class="card-img-top" alt="<?php echo $row['pname']; ?>">
+                <div class="card-body">
+                  <h5 class="card-title"><?php echo $row['pname']; ?></h5>
+                  <p class="card-text"><?php echo $row['pdescription']; ?></p>
+                  <p class="card-text">Τιμή: <?php echo $row['pprice']; ?>€</p>
+                  <a href="cart.php" class="btn btn-primary">Προσθήκη στο καλάθι</a>
+                </div>
+              </div>
+            </div>
+          <?php
+          }
+          //sound category
+        } else if (isset($_POST["sound"])) {
+          include "connect.php";
+
+          $sql = "SELECT * FROM products WHERE category='sound'";
+
+          $result = mysqli_query($conn, $sql);
+          while ($row = mysqli_fetch_assoc($result)) {
+
+
+          ?>
+            <div class="col">
+              <div class="card">
+                <img src="images/<?php echo $row['pimage']; ?>" class="card-img-top" alt="<?php echo $row['pname']; ?>">
+                <div class="card-body">
+                  <h5 class="card-title"><?php echo $row['pname']; ?></h5>
+                  <p class="card-text"><?php echo $row['pdescription']; ?></p>
+                  <p class="card-text">Τιμή: <?php echo $row['pprice']; ?>€</p>
+                  <a href="cart.php" class="btn btn-primary">Προσθήκη στο καλάθι</a>
+                </div>
+              </div>
+            </div>
+          <?php
+          }
+          //tv category
+        } else if (isset($_POST["tv"])) {
+          include "connect.php";
+
+          $sql = "SELECT * FROM products WHERE category='tv'";
+
+          $result = mysqli_query($conn, $sql);
+          while ($row = mysqli_fetch_assoc($result)) {
+
+
+          ?>
+            <div class="col">
+              <div class="card">
+                <img src="images/<?php echo $row['pimage']; ?>" class="card-img-top" alt="<?php echo $row['pname']; ?>">
+                <div class="card-body">
+                  <h5 class="card-title"><?php echo $row['pname']; ?></h5>
+                  <p class="card-text"><?php echo $row['pdescription']; ?></p>
+                  <p class="card-text">Τιμή: <?php echo $row['pprice']; ?>€</p>
+                  <a href="cart.php" class="btn btn-primary">Προσθήκη στο καλάθι</a>
+                </div>
+              </div>
+            </div>
+          <?php
+          }
+        } else if (isset($_POST["gadgets"])) {
+          include "connect.php";
+
+          $sql = "SELECT * FROM products WHERE category='gadgets'";
+
+          $result = mysqli_query($conn, $sql);
+          while ($row = mysqli_fetch_assoc($result)) {
+
+
+          ?>
+            <div class="col">
+              <div class="card">
+                <img src="images/<?php echo $row['pimage']; ?>" class="card-img-top" alt="<?php echo $row['pname']; ?>">
+                <div class="card-body">
+                  <h5 class="card-title"><?php echo $row['pname']; ?></h5>
+                  <p class="card-text"><?php echo $row['pdescription']; ?></p>
+                  <p class="card-text">Τιμή: <?php echo $row['pprice']; ?>€</p>
+                  <a href="cart.php" class="btn btn-primary">Προσθήκη στο καλάθι</a>
+                </div>
+              </div>
+            </div>
+        <?php
+          }
         }
-      }
-
-      ?>
-
-
-
-
-
-
-
-
-      <div class="cold-md-3">col 1</div>
-      <div class="cold-md-3">col 2</div>
-      <div class="cold-md-3">col 3</div>
-      <div class="cold-md-3">col 4</div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- <div class="text-center">
-      <div class="hero-text">
-        <h1>Σημερινές Προσφορές</h1>
+        ?>
       </div>
     </div>
-
-    <div class="offers">
-      <div class="offer-grid-item">
-        <button>
-          <div class="card border-0 offer-item1" style="width: 15rem;">
-            <img src="images\airpodsmax.jpg" class="card-img-top" alt="airpods max">
-            <div class="card-body">
-              <p class="card-text">Apple Airpods Max</p>
-            </div>
-          </div>
-        </button>
-      </div>
-      <div class="offer-grid-item">
-        <button>
-          <div class="card border-0 offer-item2" style="width: 15rem;">
-            <img src="images\appleseries9.jpg" class="card-img-top" alt="apple watch s 9">
-            <div class="card-body">
-              <p class="card-text">Apple Watch Series 9</p>
-            </div>
-          </div>
-        </button>
-      </div>
-      <div class="offer-grid-item">
-        <button>
-          <div class="card border-0 offer-item3" style="width: 15rem;">
-            <img src="images\huawei3.jpg" class="card-img-top" alt="huawei watch gt 3">
-            <div class="card-body">
-              <p class="card-text">Huawei Watch GT 3 Active</p>
-            </div>
-          </div>
-        </button>
-      </div>
-      <div class="offer-grid-item">
-        <button>
-          <div class="card border-0 offer-item4" style="width: 15rem;">
-            <img src="images\samsung43.jpg" class="card-img-top" alt="samsung tv 43inch">
-            <div class="card-body">
-              <p class="card-text">Samsung Smart TV 43"</p>
-            </div>
-          </div>
-        </button>
-      </div>
-      <div class="offer-grid-item">
-        <button>
-          <div class="card border-0 offer-item5" style="width: 15rem;">
-            <img src="images\xiaomibuds4.jpg" class="card-img-top" alt="xiaomi buds 4">
-            <div class="card-body">
-              <p class="card-text">Xiaomi Earbuds 4</p>
-            </div>
-          </div>
-        </button>
-      </div>
-      <div class="offer-grid-item">
-        <button>
-          <div class="card border-0 offer-item6" style="width: 15rem;">
-            <img src="images\sgalaxya54.jpg" class="card-img-top" alt="samsung galaxy a54">
-            <div class="card-body">
-              <p class="card-text">Samsung Galaxy A54</p>
-            </div>
-          </div>
-        </button>
-      </div>
-
-    </div> -->
-
-  <div class="container">
-
   </div>
 
 
