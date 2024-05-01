@@ -6,10 +6,6 @@ if (isset($_POST["logout"])) {
   header("Location:frontpage.php");
 }
 
-// if (isset($_POST["add_to_cart"])) {
-//   header("Location:cart.php");
-// }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -129,10 +125,10 @@ if (isset($_POST["logout"])) {
             echo "<h5 class='card-title'>" . $row["pname"] . "</h5>";
             echo "<p class='card-text'>" . $row["pdescription"] . "</p>";
             echo "<p class='card-text'>Τιμή:" . $row["pprice"] . "€</p>";
-            echo "<form action action='cart.php' method='POST'>";
-            echo "<input type='hidden' name='pname' value=" . $row["pname"] . ">";
-            echo "<input type='hidden' name='pprice' value=" . $row["pprice"] . ">";
-            echo "<button type='submit' name='add_to_cart'><a class='btn btn-primary'>Προσθήκη στο καλάθι</a></button>";
+            echo "<form action='cart.php' method='POST'>";
+            echo "<input type='hidden' name='pname' value='" . $row["pname"] . "'>";
+            echo "<input type='hidden' name='pprice' value='" . $row["pprice"] . "'>";
+            echo "<button type='submit' name='add_to_cart' class='btn btn-primary'>Προσθήκη στο καλάθι</button>";
             echo "</form>";
             echo "</div>";
             echo "</div>";
@@ -152,10 +148,10 @@ if (isset($_POST["logout"])) {
             echo "<h5 class='card-title'>" . $row["pname"] . "</h5>";
             echo "<p class='card-text'>" . $row["pdescription"] . "</p>";
             echo "<p class='card-text'>Τιμή:" . $row["pprice"] . "€</p>";
-            echo "<form action action='cart.php' method='POST'>";
-            echo "<input type='hidden' name='pname' value=" . $row["pname"] . ">";
-            echo "<input type='hidden' name='pprice' value=" . $row["pprice"] . ">";
-            echo "<button type='submit' name='add_to_cart'><a class='btn btn-primary'>Προσθήκη στο καλάθι</a></button>";
+            echo "<form action='cart.php' method='POST'>";
+            echo "<input type='hidden' name='pname' value='" . $row["pname"] . "'>";
+            echo "<input type='hidden' name='pprice' value='" . $row["pprice"] . "'>";
+            echo "<button type='submit' name='add_to_cart' class='btn btn-primary'>Προσθήκη στο καλάθι</button>";
             echo "</form>";
             echo "</div>";
             echo "</div>";
@@ -175,10 +171,10 @@ if (isset($_POST["logout"])) {
             echo "<h5 class='card-title'>" . $row["pname"] . "</h5>";
             echo "<p class='card-text'>" . $row["pdescription"] . "</p>";
             echo "<p class='card-text'>Τιμή:" . $row["pprice"] . "€</p>";
-            echo "<form action action='cart.php' method='POST'>";
-            echo "<input type='hidden' name='pname' value=" . $row["pname"] . ">";
-            echo "<input type='hidden' name='pprice' value=" . $row["pprice"] . ">";
-            echo "<button type='submit' name='add_to_cart'><a class='btn btn-primary'>Προσθήκη στο καλάθι</a></button>";
+            echo "<form action='cart.php' method='POST'>";
+            echo "<input type='hidden' name='pname' value='" . $row["pname"] . "'>";
+            echo "<input type='hidden' name='pprice' value='" . $row["pprice"] . "'>";
+            echo "<button type='submit' name='add_to_cart' class='btn btn-primary'>Προσθήκη στο καλάθι</button>";
             echo "</form>";
             echo "</div>";
             echo "</div>";
@@ -198,10 +194,10 @@ if (isset($_POST["logout"])) {
             echo "<h5 class='card-title'>" . $row["pname"] . "</h5>";
             echo "<p class='card-text'>" . $row["pdescription"] . "</p>";
             echo "<p class='card-text'>Τιμή:" . $row["pprice"] . "€</p>";
-            echo "<form action action='cart.php' method='POST'>";
-            echo "<input type='hidden' name='pname' value=" . $row["pname"] . ">";
-            echo "<input type='hidden' name='pprice' value=" . $row["pprice"] . ">";
-            echo "<button type='submit' name='add_to_cart'><a class='btn btn-primary'>Προσθήκη στο καλάθι</a></button>";
+            echo "<form action='cart.php' method='POST'>";
+            echo "<input type='hidden' name='pname' value='" . $row["pname"] . "'>";
+            echo "<input type='hidden' name='pprice' value='" . $row["pprice"] . "'>";
+            echo "<button type='submit' name='add_to_cart' class='btn btn-primary'>Προσθήκη στο καλάθι</button>";
             echo "</form>";
             echo "</div>";
             echo "</div>";

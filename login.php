@@ -14,9 +14,16 @@ if (isset($_POST["login"])) {
     echo "<script> alert ('Τα στοιχεία που έδωσες είναι λάθος!')</script>";
   } else {
     $_SESSION["fname"] = $row["fname"];
+
+    if (!isset($_SESSION["cart"])) {
+      $_SESSION["cart"] = [];
+    }
+
     header("Location:home.php");
   }
 }
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -52,7 +59,7 @@ if (isset($_POST["login"])) {
                 <input type="email" name="email" required id="inputEmail" class="form-control my-4 py-2" placeholder="Email">
                 <input type="password" name="pass" id="inputLname" class="form-control my-4 py-2" placeholder="Ο κωδικός σου">
                 <div class="but text-center mt-3">
-                  <button type="submit" name="login" class="btn">Σύνδεση</button>
+                  <button type="submit" name="login" class="btn btn-primary">Σύνδεση</button>
                   <a href="register.php" class="nav-link">Νέος χρήστης; Κάνε εγγραφή τώρα!</a>
                 </div>
               </form>
@@ -63,28 +70,6 @@ if (isset($_POST["login"])) {
     </div>
   </section>
 
-  <!-- <section id="login-form">
-    <div class="container mt-5 pt-5">
-      <div class="row">
-        <col-12 class="col-sm5 col-md-6 m-auto">
-          <card class="card border-0 shadow">
-            <div class="card-body">
-              <form action="login.php" method="POST">
-                <input type="email" name="email" required id="inputEmail" class="form-control my-4 py-2" placeholder="Email">
-                <input type="password" name="pass" id="inputLname" class="form-control my-4 py-2" placeholder="Ο κωδικός σου">
-                <div class="text-center mt-3">
-                  <button type="submit" name="login" class="btn btn-dark">Σύνδεση</button>
-                  <a href="recovery.php" class="nav-link">Ξέχασες τον κωδικό σου; Ανάκτηση</a>
-                  <a href="register.php" class="nav-link">Νέος χρήστης; Κάνε εγγραφή τώρα!</a>
-                </div>
-              </form>
-            </div>
-          </card>
-        </col-12>
-      </div>
-    </div> -->
-
-  </section>
 
   <script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>

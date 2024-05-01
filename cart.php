@@ -7,8 +7,6 @@ if (isset($_POST["logout"])) {
 }
 
 
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -68,21 +66,50 @@ if (isset($_POST["logout"])) {
 
     <div class="containter">
 
-        <h1>Το καλάθι σου</h1>
+        <div class="text-center">
+            <h1>Το καλάθι σου</h1>
+        </div>
 
         <?php
+
+        $sum = 0;
 
         if (isset($_POST["add_to_cart"])) {
             $pname = $_POST["pname"];
             $pprice = $_POST["pprice"];
-
-            echo "<div class='text-center'>";
-            echo "<table class='table'> <thead class='thead-dark'>";
-            echo "<tr> <th> Προϊόν </th> <th> Τιμή </th> </tr> </thead>";
-            echo "<tr> <td> $pname </td> <td> $pprice </td></tr>";
-            echo "</table>";
-            echo "</div>";
+            $item = ["pname" => $pname, "pprice" => $pprice];
+            $_SESSION["cart"][] = $item;
         }
+
+        //backend reset
+        if (isset($_POST["cart_reset"])) {
+
+            $_SESSION["cart"] = [];
+        }
+
+        //table
+        echo "<div class='text-center'>";
+        echo "<table class='table'> <thead class='thead-dark'>";
+        echo "<tr> <th> Προϊόν </th> <th> Τιμή </th> </tr> </thead>";
+
+        //item addition loop
+        foreach ($_SESSION["cart"] as $row) {
+            echo "<tr> <td>" . $row['pname'] . " </td> <td> " . $row['pprice'] . " </td></tr>";
+            $sum += floatval($row["pprice"]);
+        }
+
+        echo "<tr> <th> <colspan='1'> </th> <th> Σύνολο </th> </tr> </thead>";
+        echo "<tr> <td> </td> <td> " . $sum . " </td></tr>";
+        echo "</table>";
+
+        //reset button
+        echo "<form action='cart.php' method='POST'>";
+        echo "<button type='submit' name='cart_reset' class='btn btn-danger'>";
+        echo "Άδειασμα Καλαθιού";
+        echo "</button>";
+        echo "</form>";
+
+        echo "</div>";
 
         ?>
 
