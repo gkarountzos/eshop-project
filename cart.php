@@ -75,8 +75,13 @@ if (isset($_POST["logout"])) {
         if (isset($_POST["add_to_cart"])) {
             $pname = $_POST["pname"];
             $pprice = $_POST["pprice"];
-            echo $pname;
-            echo $pprice;
+
+            echo "<div class='text-center'>";
+            echo "<table class='table'> <thead class='thead-dark'>";
+            echo "<tr> <th> Προϊόν </th> <th> Τιμή </th> </tr> </thead>";
+            echo "<tr> <td> $pname </td> <td> $pprice </td></tr>";
+            echo "</table>";
+            echo "</div>";
         }
 
         ?>

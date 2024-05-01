@@ -6,9 +6,9 @@ if (isset($_POST["logout"])) {
   header("Location:frontpage.php");
 }
 
-if (isset($_POST["add_to_cart"])) {
-  header("Location:cart.php");
-}
+// if (isset($_POST["add_to_cart"])) {
+//   header("Location:cart.php");
+// }
 
 ?>
 <!DOCTYPE html>
