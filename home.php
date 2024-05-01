@@ -96,28 +96,25 @@ if (isset($_POST["add_to_cart"])) {
           include "connect.php";
 
           $sql = "SELECT * FROM products WHERE category='smartphones'";
-
           $result = mysqli_query($conn, $sql);
+
           while ($row = mysqli_fetch_assoc($result)) {
-
-
-        ?>
-            <div class="col">
-              <div class="card">
-                <img src="images/<?php echo $row['pimage']; ?>" class="card-img-top" alt="<?php echo $row['pname']; ?>">
-                <div class="card-body">
-                  <h5 class="card-title"><?php echo $row['pname']; ?></h5>
-                  <p class="card-text"><?php echo $row['pdescription']; ?></p>
-                  <p class="card-text">Τιμή: <?php echo $row['pprice']; ?>€</p>
-                  <form action action="cart.php" method="POST">
-                    <button type="submit" name="add_to_cart"><a class="btn btn-primary">Προσθήκη στο καλάθι</a></button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          <?php
+            echo "<div class='col'>";
+            echo "<div class='card'>";
+            echo "<img src='images/" . $row["pimage"] . "' class='card-img-top' > ";
+            echo "<div class='card-body'>";
+            echo "<h5 class='card-title'>" . $row["pname"] . "</h5>";
+            echo "<p class='card-text'>" . $row["pdescription"] . "</p>";
+            echo "<p class='card-text'>Τιμή:" . $row["pprice"] . "€</p>";
+            echo "<form action='cart.php' method='POST'>";
+            echo "<input type='hidden' name='pname' value='" . $row["pname"] . "'>";
+            echo "<input type='hidden' name='pprice' value='" . $row["pprice"] . "'>";
+            echo "<button type='submit' name='add_to_cart' class='btn btn-primary'>Προσθήκη στο καλάθι</button>";
+            echo "</form>";
+            echo "</div>";
+            echo "</div>";
+            echo "</div>";
           }
-          //computers category
         } else if (isset($_POST["computers"])) {
           include "connect.php";
 
@@ -125,25 +122,22 @@ if (isset($_POST["add_to_cart"])) {
 
           $result = mysqli_query($conn, $sql);
           while ($row = mysqli_fetch_assoc($result)) {
-
-
-          ?>
-            <div class="col">
-              <div class="card">
-                <img src="images/<?php echo $row['pimage']; ?>" class="card-img-top" alt="<?php echo $row['pname']; ?>">
-                <div class="card-body">
-                  <h5 class="card-title"><?php echo $row['pname']; ?></h5>
-                  <p class="card-text"><?php echo $row['pdescription']; ?></p>
-                  <p class="card-text">Τιμή: <?php echo $row['pprice']; ?>€</p>
-                  <form action action="cart.php" method="POST">
-                    <button type="submit" name="add_to_cart"><a class="btn btn-primary">Προσθήκη στο καλάθι</a></button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          <?php
+            echo "<div class='col'>";
+            echo "<div class='card'>";
+            echo "<img src='images/" . $row["pimage"] . "' class='card-img-top' > ";
+            echo "<div class='card-body'>";
+            echo "<h5 class='card-title'>" . $row["pname"] . "</h5>";
+            echo "<p class='card-text'>" . $row["pdescription"] . "</p>";
+            echo "<p class='card-text'>Τιμή:" . $row["pprice"] . "€</p>";
+            echo "<form action action='cart.php' method='POST'>";
+            echo "<input type='hidden' name='pname' value=" . $row["pname"] . ">";
+            echo "<input type='hidden' name='pprice' value=" . $row["pprice"] . ">";
+            echo "<button type='submit' name='add_to_cart'><a class='btn btn-primary'>Προσθήκη στο καλάθι</a></button>";
+            echo "</form>";
+            echo "</div>";
+            echo "</div>";
+            echo "</div>";
           }
-          //sound category
         } else if (isset($_POST["sound"])) {
           include "connect.php";
 
@@ -151,25 +145,22 @@ if (isset($_POST["add_to_cart"])) {
 
           $result = mysqli_query($conn, $sql);
           while ($row = mysqli_fetch_assoc($result)) {
-
-
-          ?>
-            <div class="col">
-              <div class="card">
-                <img src="images/<?php echo $row['pimage']; ?>" class="card-img-top" alt="<?php echo $row['pname']; ?>">
-                <div class="card-body">
-                  <h5 class="card-title"><?php echo $row['pname']; ?></h5>
-                  <p class="card-text"><?php echo $row['pdescription']; ?></p>
-                  <p class="card-text">Τιμή: <?php echo $row['pprice']; ?>€</p>
-                  <form action action="cart.php" method="POST">
-                    <button type="submit" name="add_to_cart"><a class="btn btn-primary">Προσθήκη στο καλάθι</a></button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          <?php
+            echo "<div class='col'>";
+            echo "<div class='card'>";
+            echo "<img src='images/" . $row["pimage"] . "' class='card-img-top'>";
+            echo "<div class='card-body'>";
+            echo "<h5 class='card-title'>" . $row["pname"] . "</h5>";
+            echo "<p class='card-text'>" . $row["pdescription"] . "</p>";
+            echo "<p class='card-text'>Τιμή:" . $row["pprice"] . "€</p>";
+            echo "<form action action='cart.php' method='POST'>";
+            echo "<input type='hidden' name='pname' value=" . $row["pname"] . ">";
+            echo "<input type='hidden' name='pprice' value=" . $row["pprice"] . ">";
+            echo "<button type='submit' name='add_to_cart'><a class='btn btn-primary'>Προσθήκη στο καλάθι</a></button>";
+            echo "</form>";
+            echo "</div>";
+            echo "</div>";
+            echo "</div>";
           }
-          //tv category
         } else if (isset($_POST["tv"])) {
           include "connect.php";
 
@@ -177,23 +168,21 @@ if (isset($_POST["add_to_cart"])) {
 
           $result = mysqli_query($conn, $sql);
           while ($row = mysqli_fetch_assoc($result)) {
-
-
-          ?>
-            <div class="col">
-              <div class="card">
-                <img src="images/<?php echo $row['pimage']; ?>" class="card-img-top" alt="<?php echo $row['pname']; ?>">
-                <div class="card-body">
-                  <h5 class="card-title"><?php echo $row['pname']; ?></h5>
-                  <p class="card-text"><?php echo $row['pdescription']; ?></p>
-                  <p class="card-text">Τιμή: <?php echo $row['pprice']; ?>€</p>
-                  <form action action="cart.php" method="POST">
-                    <button type="submit" name="add_to_cart"><a class="btn btn-primary">Προσθήκη στο καλάθι</a></button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          <?php
+            echo "<div class='col'>";
+            echo "<div class='card'>";
+            echo "<img src='images/" . $row["pimage"] . "' class='card-img-top'>";
+            echo "<div class='card-body'>";
+            echo "<h5 class='card-title'>" . $row["pname"] . "</h5>";
+            echo "<p class='card-text'>" . $row["pdescription"] . "</p>";
+            echo "<p class='card-text'>Τιμή:" . $row["pprice"] . "€</p>";
+            echo "<form action action='cart.php' method='POST'>";
+            echo "<input type='hidden' name='pname' value=" . $row["pname"] . ">";
+            echo "<input type='hidden' name='pprice' value=" . $row["pprice"] . ">";
+            echo "<button type='submit' name='add_to_cart'><a class='btn btn-primary'>Προσθήκη στο καλάθι</a></button>";
+            echo "</form>";
+            echo "</div>";
+            echo "</div>";
+            echo "</div>";
           }
         } else if (isset($_POST["gadgets"])) {
           include "connect.php";
@@ -202,25 +191,25 @@ if (isset($_POST["add_to_cart"])) {
 
           $result = mysqli_query($conn, $sql);
           while ($row = mysqli_fetch_assoc($result)) {
-
-
-          ?>
-            <div class="col">
-              <div class="card">
-                <img src="images/<?php echo $row['pimage']; ?>" class="card-img-top" alt="<?php echo $row['pname']; ?>">
-                <div class="card-body">
-                  <h5 class="card-title"><?php echo $row['pname']; ?></h5>
-                  <p class="card-text"><?php echo $row['pdescription']; ?></p>
-                  <p class="card-text">Τιμή: <?php echo $row['pprice']; ?>€</p>
-                  <form action action="cart.php" method="POST">
-                    <button type="submit" name="add_to_cart"><a class="btn btn-primary">Προσθήκη στο καλάθι</a></button>
-                  </form>
-                </div>
-              </div>
-            </div>
-        <?php
+            echo "<div class='col'>";
+            echo "<div class='card'>";
+            echo "<img src='images/" . $row["pimage"] . "' class='card-img-top'>";
+            echo "<div class='card-body'>";
+            echo "<h5 class='card-title'>" . $row["pname"] . "</h5>";
+            echo "<p class='card-text'>" . $row["pdescription"] . "</p>";
+            echo "<p class='card-text'>Τιμή:" . $row["pprice"] . "€</p>";
+            echo "<form action action='cart.php' method='POST'>";
+            echo "<input type='hidden' name='pname' value=" . $row["pname"] . ">";
+            echo "<input type='hidden' name='pprice' value=" . $row["pprice"] . ">";
+            echo "<button type='submit' name='add_to_cart'><a class='btn btn-primary'>Προσθήκη στο καλάθι</a></button>";
+            echo "</form>";
+            echo "</div>";
+            echo "</div>";
+            echo "</div>";
           }
         }
+
+
         ?>
       </div>
     </div>

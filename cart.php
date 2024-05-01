@@ -7,6 +7,8 @@ if (isset($_POST["logout"])) {
 }
 
 
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -73,12 +75,12 @@ if (isset($_POST["logout"])) {
         if (isset($_POST["add_to_cart"])) {
             $pname = $_POST["pname"];
             $pprice = $_POST["pprice"];
-
             echo $pname;
             echo $pprice;
         }
 
         ?>
+
 
 
 
