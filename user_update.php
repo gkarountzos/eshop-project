@@ -11,6 +11,8 @@ if (isset($_POST["update"])) {
   $old_pass = $_POST["old-pass"];
   $new_pass = $_POST["new-pass"];
   $conf_new_pass = $_POST["conf-new-pass"];
+  // $current_user_id = $_SESSION["id"];
+  // $sql_check_pass = "SELECT password FROM users WHERE id='$current_user'";
 
   if ($new_pass != $conf_new_pass) {
     echo "<script> alert ('Οι κωδικού δε ταιριάζουν.')</script>";

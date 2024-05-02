@@ -65,7 +65,7 @@ if (isset($_POST["register"])) {
                 <input type="text" name="address" required id="inputAddress" class="form-control my-4 py-2" placeholder="Διεύθυνση *">
                 <input type="text" name="phone" required id="inputPhone" class="form-control my-4 py-2" placeholder="Τηλ. Επικοινωνίας *">
                 <div class="text-center mt-3 but">
-                  <button type="submit" name="register" value="Submit" class="btn">Εγγραφή</button>
+                  <button type="submit" name="register" value="Submit" class="btn btn-success">Εγγραφή</button>
                   <a href="login.php" class="nav-link">Έχεις ήδη λογαριασμό; Συνδέσου τωρα!</a>
                 </div>
             </div>
