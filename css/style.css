@@ -55,6 +55,9 @@ nav {
   width: 75%;
 }
 
+.card-img-top {
+  width: 50%;
+}
 .container .logo-hero img {
   width: 50%;
   height: auto;

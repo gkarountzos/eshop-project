@@ -97,11 +97,13 @@ if (isset($_POST["logout"])) {
           while ($row = mysqli_fetch_assoc($result)) {
             echo "<div class='col'>";
             echo "<div class='card'>";
+            echo "<div class='text-center'>";
             echo "<img src='images/" . $row["pimage"] . "' class='card-img-top' > ";
+            echo "</div>";
             echo "<div class='card-body'>";
             echo "<h5 class='card-title'>" . $row["pname"] . "</h5>";
             echo "<p class='card-text'>" . $row["pdescription"] . "</p>";
-            echo "<p class='card-text'>Τιμή:" . $row["pprice"] . "€</p>";
+            echo "<p class='card-text'>Τιμή: " . $row["pprice"] . "€</p>";
             echo "<form action='cart.php' method='POST'>";
             echo "<input type='hidden' name='pname' value='" . $row["pname"] . "'>";
             echo "<input type='hidden' name='pprice' value='" . $row["pprice"] . "'>";
@@ -120,11 +122,13 @@ if (isset($_POST["logout"])) {
           while ($row = mysqli_fetch_assoc($result)) {
             echo "<div class='col'>";
             echo "<div class='card'>";
+            echo "<div class='text-center'>";
             echo "<img src='images/" . $row["pimage"] . "' class='card-img-top' > ";
+            echo "</div>";
             echo "<div class='card-body'>";
             echo "<h5 class='card-title'>" . $row["pname"] . "</h5>";
             echo "<p class='card-text'>" . $row["pdescription"] . "</p>";
-            echo "<p class='card-text'>Τιμή:" . $row["pprice"] . "€</p>";
+            echo "<p class='card-text'>Τιμή: " . $row["pprice"] . "€</p>";
             echo "<form action='cart.php' method='POST'>";
             echo "<input type='hidden' name='pname' value='" . $row["pname"] . "'>";
             echo "<input type='hidden' name='pprice' value='" . $row["pprice"] . "'>";
@@ -143,11 +147,13 @@ if (isset($_POST["logout"])) {
           while ($row = mysqli_fetch_assoc($result)) {
             echo "<div class='col'>";
             echo "<div class='card'>";
-            echo "<img src='images/" . $row["pimage"] . "' class='card-img-top'>";
+            echo "<div class='text-center'>";
+            echo "<img src='images/" . $row["pimage"] . "' class='card-img-top' > ";
+            echo "</div>";
             echo "<div class='card-body'>";
             echo "<h5 class='card-title'>" . $row["pname"] . "</h5>";
             echo "<p class='card-text'>" . $row["pdescription"] . "</p>";
-            echo "<p class='card-text'>Τιμή:" . $row["pprice"] . "€</p>";
+            echo "<p class='card-text'>Τιμή: " . $row["pprice"] . "€</p>";
             echo "<form action='cart.php' method='POST'>";
             echo "<input type='hidden' name='pname' value='" . $row["pname"] . "'>";
             echo "<input type='hidden' name='pprice' value='" . $row["pprice"] . "'>";
@@ -166,11 +172,13 @@ if (isset($_POST["logout"])) {
           while ($row = mysqli_fetch_assoc($result)) {
             echo "<div class='col'>";
             echo "<div class='card'>";
-            echo "<img src='images/" . $row["pimage"] . "' class='card-img-top'>";
+            echo "<div class='text-center'>";
+            echo "<img src='images/" . $row["pimage"] . "' class='card-img-top' > ";
+            echo "</div>";
             echo "<div class='card-body'>";
             echo "<h5 class='card-title'>" . $row["pname"] . "</h5>";
             echo "<p class='card-text'>" . $row["pdescription"] . "</p>";
-            echo "<p class='card-text'>Τιμή:" . $row["pprice"] . "€</p>";
+            echo "<p class='card-text'>Τιμή: " . $row["pprice"] . "€</p>";
             echo "<form action='cart.php' method='POST'>";
             echo "<input type='hidden' name='pname' value='" . $row["pname"] . "'>";
             echo "<input type='hidden' name='pprice' value='" . $row["pprice"] . "'>";
@@ -189,11 +197,13 @@ if (isset($_POST["logout"])) {
           while ($row = mysqli_fetch_assoc($result)) {
             echo "<div class='col'>";
             echo "<div class='card'>";
-            echo "<img src='images/" . $row["pimage"] . "' class='card-img-top'>";
+            echo "<div class='text-center'>";
+            echo "<img src='images/" . $row["pimage"] . "' class='card-img-top' > ";
+            echo "</div>";
             echo "<div class='card-body'>";
             echo "<h5 class='card-title'>" . $row["pname"] . "</h5>";
             echo "<p class='card-text'>" . $row["pdescription"] . "</p>";
-            echo "<p class='card-text'>Τιμή:" . $row["pprice"] . "€</p>";
+            echo "<p class='card-text'>Τιμή: " . $row["pprice"] . "€</p>";
             echo "<form action='cart.php' method='POST'>";
             echo "<input type='hidden' name='pname' value='" . $row["pname"] . "'>";
             echo "<input type='hidden' name='pprice' value='" . $row["pprice"] . "'>";
