@@ -54,10 +54,6 @@ if (isset($_POST["logout"])) {
                             <a class="nav-link" href="cart.php">Καλάθι</a>
                         </li>
                     </ul>
-                    <form class="d-flex me-lg-3" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Ψάχνω για..." aria-label="Search">
-                        <button class="btn btn-outline-dark" type="submit">Αναζήτηση</button>
-                    </form>
                 </div>
             </div>
         </nav>

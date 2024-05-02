@@ -13,7 +13,7 @@ if (isset($_POST["update"])) {
   $conf_new_pass = $_POST["conf-new-pass"];
 
   if ($new_pass != $conf_new_pass) {
-    echo "<script> alert ('Οι κωδικού δε ταιριάζουν.')</script>";
+    echo "<script> alert ('Οι κωδικοί δε ταιριάζουν.')</script>";
   } else if ($_SESSION["id"]) {
 
     $myuser_id = $_SESSION["id"];
@@ -74,10 +74,6 @@ if (isset($_POST["update"])) {
               <a class="nav-link" href="cart.php">Καλάθι</a>
             </li>
           </ul>
-          <form class="d-flex me-lg-3" role="search">
-            <input class="form-control me-2" type="search" placeholder="Ψάχνω για..." aria-label="Search">
-            <button class="btn btn-outline-dark" type="submit">Αναζήτηση</button>
-          </form>
         </div>
       </div>
     </nav>
