@@ -6,6 +6,25 @@ if (isset($_POST["logout"])) {
   header("Location:frontpage.php");
 }
 
+if (isset($_POST["update"])) {
+  include 'connect.php';
+  $old_pass = $_POST["old-pass"];
+  $new_pass = $_POST["new-pass"];
+  $conf_new_pass = $_POST["conf-new-pass"];
+
+  if ($new_pass != $conf_new_pass) {
+    echo "<script> alert ('Οι κωδικού δε ταιριάζουν.')</script>";
+  } else {
+    $sql = "UPDATE users SET password = '$new_pass' WHERE password = '$old_pass' ";
+
+    if (mysqli_query($conn, $sql)) {
+      echo "<script> alert ('Επιτυχής αλλαγή κωδικού.')</script>";
+    } else {
+      echo "<script> alert ('Η αλλαγή κωδικού απέτυχε.')</script>";
+    }
+  }
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -71,15 +90,12 @@ if (isset($_POST["logout"])) {
               <div class="text-center form-logo">
                 <img src="images/logo-techgear-trans.svg">
               </div>
-              <form action="register.php" method="POST">
-                <input type="text" name="fname" required id="inputFname1" class="form-control my-4 py-2" placeholder="Όνομα *">
-                <input type="text" name="lname" required id="inputLname1" class="form-control my-4 py-2" placeholder="Επίθετο *">
-                <input type="email" name="email" required id="inputEmail" class="form-control my-4 py-2" placeholder="Email *">
+              <form action="user_update.php" method="POST">
                 <input type="password" name="old-pass" required id="inputPassword" class="form-control my-4 py-2" placeholder="Παλιός κωδικός *">
                 <input type="password" name="new-pass" required id="inputAddress" class="form-control my-4 py-2" placeholder="Νέος κωδικός *">
-                <input type="password" name="confirm-new-pass" required id="inputPhone" class="form-control my-4 py-2" placeholder="Επιβεβαίωση νέου κωδικού *">
+                <input type="password" name="conf-new-pass" required id="inputPhone" class="form-control my-4 py-2" placeholder="Επιβεβαίωση νέου κωδικού *">
                 <div class="text-center mt-3">
-                  <button type="submit" name="register" class="btn btn-success">Αλλαγή στοιχείων</button>
+                  <button type="submit" name="update" class="btn btn-success">Αλλαγή στοιχείων</button>
                 </div>
             </div>
           </div>

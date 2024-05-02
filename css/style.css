@@ -3,7 +3,7 @@
   --secondarycolor: #f0f3ff;
   --thirdcolor: #836fff;
   --fourthcolor: #ffc439;
-  font-family: "Roboto Mono", monospace;
+  /* font-family: "Roboto Mono", monospace; */
   font-size: 16px;
 }
 
@@ -49,40 +49,16 @@ nav {
 
 .container form button {
   border: none;
-  /* background: transparent; */
 }
-
-.items img {
-  width: 8%;
-}
-
-/* .offers {
-  display: grid;
-  grid-template-rows: 20em 20em;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1em;
-  width: 100vw;
-  height: auto;
-}
-
-.offer-grid-item {
-  place-self: center;
-}
-
-.hero-text {
-  padding-block: 20px;
-}
-
-.hero-promo {
-  padding-block: 40px;
-}
-
-.hero-promo img {
-  border-radius: 15px;
-} */
 
 .form-logo img {
   width: 75%;
+}
+
+.container .logo-hero img {
+  width: 50%;
+  height: auto;
+  padding-block: 10rem;
 }
 
 /* responsive */
