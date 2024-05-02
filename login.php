@@ -14,6 +14,7 @@ if (isset($_POST["login"])) {
     echo "<script> alert ('Τα στοιχεία που έδωσες είναι λάθος!')</script>";
   } else {
     $_SESSION["fname"] = $row["fname"];
+    $_SESSION["id"] = $row["id"];
 
     if (!isset($_SESSION["cart"])) {
       $_SESSION["cart"] = [];
@@ -22,7 +23,6 @@ if (isset($_POST["login"])) {
     header("Location:home.php");
   }
 }
-
 
 ?>
 <!DOCTYPE html>

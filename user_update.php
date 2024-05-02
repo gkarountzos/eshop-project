@@ -11,19 +11,19 @@ if (isset($_POST["update"])) {
   $old_pass = $_POST["old-pass"];
   $new_pass = $_POST["new-pass"];
   $conf_new_pass = $_POST["conf-new-pass"];
-  // $current_user_id = $_SESSION["id"];
-  // $sql_check_pass = "SELECT password FROM users WHERE id='$current_user'";
 
   if ($new_pass != $conf_new_pass) {
     echo "<script> alert ('Οι κωδικού δε ταιριάζουν.')</script>";
-  } else {
-    $sql = "UPDATE users SET password = '$new_pass' WHERE password = '$old_pass' ";
+  } else if ($_SESSION["id"]) {
 
-    if (mysqli_query($conn, $sql)) {
-      echo "<script> alert ('Επιτυχής αλλαγή κωδικού.')</script>";
-    } else {
-      echo "<script> alert ('Η αλλαγή κωδικού απέτυχε.')</script>";
-    }
+    $myuser_id = $_SESSION["id"];
+
+    $sql_update = "UPDATE users SET password = '$new_pass' WHERE id='$myuser_id' AND password = '$old_pass'";
+    $result = mysqli_query($conn, $sql_update);
+
+    echo "<script> alert ('Επιτυχής αλλαγή κωδικού.')</script>";
+  } else {
+    echo "<script> alert ('Η αλλαγή κωδικού απέτυχε.')</script>";
   }
 }
 
@@ -93,9 +93,9 @@ if (isset($_POST["update"])) {
                 <img src="images/logo-techgear-trans.svg">
               </div>
               <form action="user_update.php" method="POST">
-                <input type="password" name="old-pass" required id="inputPassword" class="form-control my-4 py-2" placeholder="Παλιός κωδικός *">
-                <input type="password" name="new-pass" required id="inputAddress" class="form-control my-4 py-2" placeholder="Νέος κωδικός *">
-                <input type="password" name="conf-new-pass" required id="inputPhone" class="form-control my-4 py-2" placeholder="Επιβεβαίωση νέου κωδικού *">
+                <input type="password" name="old-pass" required class="form-control my-4 py-2" placeholder="Παλιός κωδικός *">
+                <input type="password" name="new-pass" required class="form-control my-4 py-2" placeholder="Νέος κωδικός *">
+                <input type="password" name="conf-new-pass" required class="form-control my-4 py-2" placeholder="Επιβεβαίωση νέου κωδικού *">
                 <div class="text-center mt-3">
                   <button type="submit" name="update" class="btn btn-success">Αλλαγή στοιχείων</button>
                 </div>
