@@ -69,11 +69,11 @@ if (isset($_POST["logout"])) {
         <?php
 
         $sum = 0;
-
+        //fetching product info
         if (isset($_POST["add_to_cart"])) {
             $pname = $_POST["pname"];
             $pprice = $_POST["pprice"];
-            $item = ["pname" => $pname, "pprice" => $pprice];
+            $item = ["pname" => $pname, "pprice" => $pprice];  //creating associative array $item
             $_SESSION["cart"][] = $item;
         }
 
@@ -108,16 +108,7 @@ if (isset($_POST["logout"])) {
         echo "</div>";
 
         ?>
-
-
-
-
-
-
     </div>
-
-
-
 
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>

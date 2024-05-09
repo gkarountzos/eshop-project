@@ -109,6 +109,7 @@ if (isset($_POST["logout"])) {
             echo "</div>";
             echo "</div>";
           }
+          //computer category
         } else if (isset($_POST["computers"])) {
           include "connect.php";
 
@@ -134,6 +135,7 @@ if (isset($_POST["logout"])) {
             echo "</div>";
             echo "</div>";
           }
+          //sound category
         } else if (isset($_POST["sound"])) {
           include "connect.php";
 
@@ -159,6 +161,7 @@ if (isset($_POST["logout"])) {
             echo "</div>";
             echo "</div>";
           }
+          //tv category
         } else if (isset($_POST["tv"])) {
           include "connect.php";
 
@@ -184,6 +187,7 @@ if (isset($_POST["logout"])) {
             echo "</div>";
             echo "</div>";
           }
+          //gadgets category
         } else if (isset($_POST["gadgets"])) {
           include "connect.php";
 
