@@ -1,4 +1,4 @@
-# E-Shop/E-Commerse Project
+# E-Commerse Project
 
 This web application is a project platform designed for academic purposes, providing a seamless online shopping experience. 
 Here's an overview of its key components:
