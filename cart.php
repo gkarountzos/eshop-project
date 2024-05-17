@@ -83,6 +83,10 @@ if (isset($_POST["logout"])) {
             $_SESSION["cart"] = [];
         }
 
+        if (isset($_POST["order"])) {
+            echo "<script> alert ('Η παραγγελία σου ολοκληρώθηκε!')</script>";
+        }
+
         //table
         echo "<div class='text-center'>";
         echo "<table class='table'> <thead class='thead-dark'>";
@@ -90,18 +94,26 @@ if (isset($_POST["logout"])) {
 
         //item addition loop
         foreach ($_SESSION["cart"] as $row) {
-            echo "<tr> <td>" . $row['pname'] . " </td> <td> " . $row['pprice'] . " </td></tr>";
+            echo "<tr> <td>" . $row['pname'] . " </td> <td> " . $row['pprice'] . "€ </td></tr>";
             $sum += floatval($row["pprice"]);
         }
 
         echo "<tr> <th> <colspan='1'> </th> <th> Σύνολο </th> </tr> </thead>";
-        echo "<tr> <td> </td> <td> " . $sum . " </td></tr>";
+        echo "<tr> <td> </td> <td> " . $sum . "€ </td></tr>";
         echo "</table>";
 
         //reset button
         echo "<form action='cart.php' method='POST'>";
         echo "<button type='submit' name='cart_reset' class='btn btn-danger'>";
         echo "Άδειασμα Καλαθιού";
+        echo "</button>";
+        echo "</form>";
+        echo "<br>";
+
+        //order button
+        echo "<form action='cart.php' method='POST'>";
+        echo "<button type='submit' name='order' class='btn btn-success'>";
+        echo "Ολοκλήρωση Παραγγελίας";
         echo "</button>";
         echo "</form>";
 
