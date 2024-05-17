@@ -114,7 +114,6 @@ if (isset($_POST["logout"])) {
           include "connect.php";
 
           $sql = "SELECT * FROM products WHERE category='computers'";
-
           $result = mysqli_query($conn, $sql);
           while ($row = mysqli_fetch_assoc($result)) {
             echo "<div class='col'>";
@@ -140,7 +139,6 @@ if (isset($_POST["logout"])) {
           include "connect.php";
 
           $sql = "SELECT * FROM products WHERE category='sound'";
-
           $result = mysqli_query($conn, $sql);
           while ($row = mysqli_fetch_assoc($result)) {
             echo "<div class='col'>";
@@ -166,7 +164,6 @@ if (isset($_POST["logout"])) {
           include "connect.php";
 
           $sql = "SELECT * FROM products WHERE category='tv'";
-
           $result = mysqli_query($conn, $sql);
           while ($row = mysqli_fetch_assoc($result)) {
             echo "<div class='col'>";
@@ -192,7 +189,6 @@ if (isset($_POST["logout"])) {
           include "connect.php";
 
           $sql = "SELECT * FROM products WHERE category='gadgets'";
-
           $result = mysqli_query($conn, $sql);
           while ($row = mysqli_fetch_assoc($result)) {
             echo "<div class='col'>";
