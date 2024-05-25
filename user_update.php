@@ -3,31 +3,40 @@ session_start();
 
 if (isset($_POST["logout"])) {
   session_destroy();
-  header("Location:frontpage.php");
+  header("Location: frontpage.php");
+  exit();
 }
 
 if (isset($_POST["update"])) {
   include 'connect.php';
+
+  // retrieve old and new password, and confirms new password from the psot request
   $old_pass = $_POST["old-pass"];
   $new_pass = $_POST["new-pass"];
   $conf_new_pass = $_POST["conf-new-pass"];
 
-  if ($new_pass != $conf_new_pass) {
-    echo "<script> alert ('Οι κωδικοί δε ταιριάζουν.')</script>";
-  } else if ($_SESSION["id"]) {
 
+  if ($new_pass != $conf_new_pass) { // checks if new password matches the confirm new password
+    echo "<script> alert ('Οι κωδικοί δε ταιριάζουν.')</script>"; // displays an alert if the passwords do not match
+  } else if ($_SESSION["id"]) { // If user is logged in (id exists in session), it retrieves the user id from session
     $myuser_id = $_SESSION["id"];
 
+    // query to update the password if the old password matches
     $sql_update = "UPDATE users SET password = '$new_pass' WHERE id='$myuser_id' AND password = '$old_pass'";
     $result = mysqli_query($conn, $sql_update);
 
-    echo "<script> alert ('Επιτυχής αλλαγή κωδικού.')</script>";
+
+    if ($result) { // checks if the update was successful
+      echo "<script> alert ('Επιτυχής αλλαγή κωδικού.')</script>"; // displays a success message if the password was successfully updated
+    } else {
+      echo "<script> alert ('Η αλλαγή κωδικού απέτυχε.')</script>"; // displays an error message if the password update failed
+    }
   } else {
     echo "<script> alert ('Η αλλαγή κωδικού απέτυχε.')</script>";
   }
 }
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 

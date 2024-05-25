@@ -1,10 +1,11 @@
 <?php
 session_start();
 
+
 if (isset($_POST["register"])) {
-  //establish connection
   include "connect.php";
 
+  // retrieves user information from the psot request
   $fname = $_POST["fname"];
   $lname = $_POST["lname"];
   $email = $_POST["email"];
@@ -12,23 +13,27 @@ if (isset($_POST["register"])) {
   $address = $_POST["address"];
   $phone = $_POST["phone"];
 
-  //email duplicate check
+  // checks for duplicate email in the database
   $sql = "SELECT * FROM users WHERE email='$email'";
-  $result = $conn->query($sql);
-  //email duplicate check
-  if ($result->num_rows > 0) {
-    echo "<script> alert ('Το email χρησιμοποιείται ήδη')</script>";
+  $result = mysqli_query($conn, $sql);
+
+
+  if ($result->num_rows > 0) { // if a user with the same email already exists
+    echo "<script> alert ('Το email χρησιμοποιείται ήδη')</script>"; // displays an alert saying the email is already in use
   } else {
-    //register user
+    // if the email is unique it registers the user
     $sql_register = "INSERT INTO users(fname,lname,email,password,address,phone)
                       VALUES('$fname','$lname','$email','$pass','$address','$phone');";
-    $result_reg = $conn->query($sql_register);
-    //redirect to login
-    header("Location:login.php");
+    $result_reg = mysqli_query($conn, $sql_register);
+
+    // redirects the user to the login page after successful registration
+    header("Location: login.php");
+    // Ensure no further code is executed after the redirect
+    exit();
   }
 }
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 

@@ -1,12 +1,16 @@
 <?php
-session_start();
 
-if (isset($_POST["logout"])) {
-  session_destroy();
-  header("Location:frontpage.php");
+session_start(); // starts the session to manage session variables
+
+
+if (isset($_POST["logout"])) { // checks if the form logout was submitted
+  session_destroy(); // destroys the current session
+  header("Location: frontpage.php"); // redirects the user to the frontpage
+  exit();
 }
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -85,32 +89,35 @@ if (isset($_POST["logout"])) {
 
         <?php
         //smartphone category
-        if (isset($_POST["smartphones"])) {
-          include "connect.php";
+        if (isset($_POST["smartphones"])) { // checks if the form smartphones was submitted
+          include "connect.php"; // includes the file containing connection with the db
 
           $sql = "SELECT * FROM products WHERE category='smartphones'";
-          $result = mysqli_query($conn, $sql);
+          $result = mysqli_query($conn, $sql); //query to retrieve the items from the db 
 
-          while ($row = mysqli_fetch_assoc($result)) {
+
+          while ($row = mysqli_fetch_assoc($result)) { // loops through each row in the result set
+            // html to display each product in a card layout
             echo "<div class='col'>";
             echo "<div class='card'>";
             echo "<div class='text-center'>";
-            echo "<img src='images/" . $row["pimage"] . "' class='card-img-top' > ";
+            echo "<img src='images/" . $row["pimage"] . "' class='card-img-top'>"; // displays the product image
             echo "</div>";
             echo "<div class='card-body'>";
-            echo "<h5 class='card-title'>" . $row["pname"] . "</h5>";
-            echo "<p class='card-text'>" . $row["pdescription"] . "</p>";
-            echo "<p class='card-text'>Τιμή: " . $row["pprice"] . "€</p>";
-            echo "<form action='cart.php' method='POST'>";
+            echo "<h5 class='card-title'>" . $row["pname"] . "</h5>"; // displays the product name
+            echo "<p class='card-text'>" . $row["pdescription"] . "</p>"; // displays the product description
+            echo "<p class='card-text'>Τιμή: " . $row["pprice"] . "€</p>"; // display the product price
+
+            echo "<form action='cart.php' method='POST'>"; // form to add the product to the cart
+            // hidden input fields to pass the product name and price
             echo "<input type='hidden' name='pname' value='" . $row["pname"] . "'>";
             echo "<input type='hidden' name='pprice' value='" . $row["pprice"] . "'>";
-            echo "<button type='submit' name='add_to_cart' class='btn btn-primary'>Προσθήκη στο καλάθι</button>";
+            echo "<button type='submit' name='add_to_cart' class='btn btn-primary'>Προσθήκη στο καλάθι</button>"; // button to submit the form and add the product to the cart
             echo "</form>";
             echo "</div>";
             echo "</div>";
             echo "</div>";
-          }
-          //computer category
+          } //same goes for the other categories.
         } else if (isset($_POST["computers"])) {
           include "connect.php";
 

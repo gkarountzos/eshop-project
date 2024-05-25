@@ -1,30 +1,38 @@
 <?php
 session_start();
 
+
 if (isset($_POST["login"])) {
   include 'connect.php';
+
+  // retrieves email and password from the post request
   $email = $_POST["email"];
   $pass = $_POST["pass"];
 
-  $sql = "SELECT * FROM users WHERE email='$email' AND password='$pass'";
 
-  $result = mysqli_query($conn, $sql);
+  $sql = "SELECT * FROM users WHERE email='$email' AND password='$pass'"; // query to select the user with the provided email and password
+  $result = mysqli_query($conn, $sql); // executes the query and stores the result in a variable
 
-  if (!$row = mysqli_fetch_assoc($result)) {
-    echo "<script> alert ('Τα στοιχεία που έδωσες είναι λάθος!')</script>";
+
+  if (!$row = mysqli_fetch_assoc($result)) { // checks if no matching user was found
+    echo "<script> alert ('Τα στοιχεία που έδωσες είναι λάθος!')</script>"; // displays an alert indicating incorrect login details
   } else {
+    // store users first name and id in session variables
     $_SESSION["fname"] = $row["fname"];
     $_SESSION["id"] = $row["id"];
 
+    // if the cart session variable is not set, initialize it as an empty array
     if (!isset($_SESSION["cart"])) {
       $_SESSION["cart"] = [];
     }
 
-    header("Location:home.php");
+    // redirects the user to the home page
+    header("Location: home.php");
+    exit();
   }
 }
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 

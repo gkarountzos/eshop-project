@@ -68,41 +68,38 @@ if (isset($_POST["logout"])) {
 
         <?php
 
-        $sum = 0;
-        //fetching product info
-        if (isset($_POST["add_to_cart"])) {
+        $sum = 0; // initializes sum variable to store the total price
+
+        if (isset($_POST["add_to_cart"])) { // checks if the form add_to_cart was submitted
+            // retrieves product name and price from the post request
             $pname = $_POST["pname"];
             $pprice = $_POST["pprice"];
-            $item = ["pname" => $pname, "pprice" => $pprice];  //creating associative array $item
-            $_SESSION["cart"][] = $item;
+            $item = ["pname" => $pname, "pprice" => $pprice]; // creates an associative array with product name and price
+            $_SESSION["cart"][] = $item; // adds the item to the session cart array
         }
 
-        //backend reset
-        if (isset($_POST["cart_reset"])) {
-
-            $_SESSION["cart"] = [];
+        if (isset($_POST["cart_reset"])) { // checks if the form cart_reset was submitted
+            $_SESSION["cart"] = []; // resets the session cart to an empty array
         }
 
-        if (isset($_POST["order"])) {
-            echo "<script> alert ('Η παραγγελία σου ολοκληρώθηκε!')</script>";
+        if (isset($_POST["order"])) { // checks if the form order was submitted
+            echo "<script> alert ('Η παραγγελία σου ολοκληρώθηκε!')</script>"; // displays a JavaScript alert that the order is compelted
         }
-
-        //table
+        // html for the cart table
         echo "<div class='text-center'>";
         echo "<table class='table'> <thead class='thead-dark'>";
         echo "<tr> <th> Προϊόν </th> <th> Τιμή </th> </tr> </thead>";
-
-        //item addition loop
-        foreach ($_SESSION["cart"] as $row) {
-            echo "<tr> <td>" . $row['pname'] . " </td> <td> " . $row['pprice'] . "€ </td></tr>";
-            $sum += floatval($row["pprice"]);
+        foreach ($_SESSION["cart"] as $row) { // loops through each item in the session cart
+            echo "<tr> <td>" . $row['pname'] . " </td> <td> " . $row['pprice'] . "€ </td></tr>"; // displays each name and price in the row of products
+            $sum += floatval($row["pprice"]); // adds the price to the total sum while converting it to float for safety reasons
         }
 
+        // displays the total sum row in the table
         echo "<tr> <th> <colspan='1'> </th> <th> Σύνολο </th> </tr> </thead>";
         echo "<tr> <td> </td> <td> " . $sum . "€ </td></tr>";
         echo "</table>";
 
-        //reset button
+        // reset cart button form
         echo "<form action='cart.php' method='POST'>";
         echo "<button type='submit' name='cart_reset' class='btn btn-danger'>";
         echo "Άδειασμα Καλαθιού";
@@ -110,7 +107,7 @@ if (isset($_POST["logout"])) {
         echo "</form>";
         echo "<br>";
 
-        //order button
+        // complete order button form
         echo "<form action='cart.php' method='POST'>";
         echo "<button type='submit' name='order' class='btn btn-success'>";
         echo "Ολοκλήρωση Παραγγελίας";
@@ -120,6 +117,7 @@ if (isset($_POST["logout"])) {
         echo "</div>";
 
         ?>
+
     </div>
 
     <script src="script.js"></script>
